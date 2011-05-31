@@ -1,0 +1,82 @@
+<cpanel include="stdheader.html">
+<cpanel Email="check_roundcube()">
+
+<div align="center">
+<p>You are logged in as <cpanel print="$authuser"></p>
+</div>
+<br><br>
+
+<div align="center">
+<table align=center width="700" border="0">
+<tr align="center">
+
+<!-- cpanelfeature aft_webmail -->
+<cpanelfeature webmail>
+
+
+<script>webmailclients['aft_webmail'] = {name:'WebMail Lite',uri:'/wm/cpanel_integration/cpanel.php'};</script>
+
+		
+	
+<td align="center" valign="bottom" id="aft_webmail_cell">
+    <a href="/wm/cpanel_integration/cpanel.php"><img src="/wm/cpanel_integration/cpanelwmlogo.png" border="0"></a><br />
+
+
+    <a href="/wm/cpanel_integration/cpanel.php">Read Mail Using WebMail Lite</a>
+
+		
+
+    <div class="autoloadlink"  id="aft_webmail_auto"><a href="#" onClick="webmailselect_setdefaultclient('aft_webmail');return false;"></a></div>
+</td>
+</cpanelfeature>
+</tr>
+
+<tr>
+ <td>&nbsp;</td>
+</tr>
+</table>
+<table align="center" width="700" border="0">
+<tr>
+  <td>&nbsp;</td>
+</tr>
+<cpanelif !$authuser==$user>
+<tr>
+<cpanelfeature popaccts>
+<td width="33%"><div valign="top" align="center"> <a href="mail/passwdpop.html?redirectdomain=&email=<cpanel sprint="$authuser,@,0">&domain=<cpanel print="DOMAIN">"><img src="<cpanel Branding="image(password)">" border="0"><br>
+      Change<br />Password</a></div></td>
+</cpanelfeature>
+<cpanelfeature forwarders>
+    <td width="33%"><div valign="top" align="center"><a href="mail/fwds.html"><img src="<cpanel Branding="image(forwardersemail)">" border="0"><br>
+      Forwarding<br />Options</a></div></td>
+</cpanelfeature>
+<cpanelfeature autoresponders>
+    <td width="33%"><div valign="top" align="center"><a href="mail/autores.html"><img src="<cpanel Branding="image(responder)">" border="0"><br>
+      Autoresponder<br />Options</a></div></td>
+</cpanelfeature>
+</tr>
+ <td>
+  &nbsp;
+
+ </td>
+</tr>
+</cpanelif>
+
+<tr>
+
+<cpanelif !$authuser==$user>
+    <td><div valign="top" align="center"><a href="mail/clientconf.html?redirectdomain=&acct=<cpanel print="$authuser">"><img src="<cpanel Branding="image(manageaccounts)">" border="0"><br />Configure<br />Mail Client</a></div></td>
+</cpanelif>
+<cpanelif !$CONF{'skipboxtrapper'} $CPDATA{'FEATURE-BOXTRAPPER'}>
+<cpanelfeature boxtrapper>
+    <td><div valign="top" align="center"><a href="mail/manage.html?account=<cpanel print="$authuser">"><img src="<cpanel Branding="image(boxtrapper)">" border="0"><br>
+      BoxTrapper</a></div></td>
+</cpanelfeature>
+</cpanelif>
+<cpanelfeature traceaddy>
+    <td><div valign="top" align="center"><a href="mail/route.html"><img src="<cpanel Branding="image(emailroute)">" border="0"><br />Email<br />Delivery Route</a></div></td>
+</cpanelfeature>
+ </tr>
+</table>
+</div>
+
+<cpanel include="stdfooter.html">

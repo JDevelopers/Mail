@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings>
+	<plugins>
+		<plugin>webmail</plugin>
+	</plugins>
+	<login>
+		<user>mailadm</user>
+		<password>12345</password>
+	</login>
+	<licensekey />
+</settings>

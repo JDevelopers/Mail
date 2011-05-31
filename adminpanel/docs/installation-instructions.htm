@@ -1,0 +1,240 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" Content="text-html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<h1>WebMail Lite PHP Installation Instructions</h1>
+	<p>
+		<a href="#LINUX">Install on Linux</a><br />
+		<a href="#WIN">Install on Windows</a>
+	</p>
+
+	<a name="LINUX"></a>
+	<h2>WebMail PHP Installation Instructions for Linux</h2>
+	<ol>
+		<li>
+			Uploading the application.
+			<br><br>
+			Unzip and upload the contents of <b>webmail</b> folder (the scripts, folders and other files of the application) from the installation package onto your web server. Let's assume you created a folder <b>webmail</b> in the root of your web space (web root) and placed the contents of the <b>web</b> folder there. This way, you'll be able to access the application through the web at the <b>http://your_domain/webmail</b> URL.
+			<br><br>
+			Examples (assuming you want to use <b>webmail</b> name for the target folder):
+			<ul>
+				<li>in case of SSH access to a <b>dedicated server</b>, the web root usually looks like <b>/var/www/html</b>. Thus, you should create <b>/var/www/html/webmail</b> folder and place the application files/folders there.</li>
+				<li>in case of uploading via FTP on a <b>shared hosting</b>, the web root is usually something like <b>/public_html</b> and you should create and upload into <b>/public_html/webmail</b> folder.</li>
+			</ul>
+			<br><br>
+		</li>
+		<li>
+			Assigning owners/permissions on the filesystem.
+			<br><br>
+			Skip  "Assigning owners/permissions" step if all of the following is true:
+			<ul>
+				<li>you only have FTP access to your server;</li>
+				<li>your FTP server doesn't allow setting permissions;</li>
+				<li>you do not have a web control panel (like cPanel or Plesk) at all or it does not allow setting permissions;</li>
+				<li>you have no other options to set permissions.</li>
+			</ul>
+			<br>
+			In all of the above is true (usually, shared hosting with preconfigured permissions), the permissions should be OK but if they are not and the hosting provider does not allow you to set them, you will need to contact their support to do this for you.
+			<br><br>
+			
+			<h4>Assigning permissions through SSH or direct access to the server.</h4>
+			Change the current working directory to the folder with WebMail Lite PHP scripts:<br>
+			<b>cd /var/www/html/webmail/</b>
+			<br><br>
+			Then, assign rights to folders and files in the WebMail Lite PHP scripts folder.
+			<br><br>
+			Assign rights to folders:<br>
+			<b>find . -type d -exec chmod 755 {} \;</b>
+			<br><br>
+			and to files:<br>
+			<b>find . -type f -exec chmod 644 {} \;</b>
+			<br><br>
+			Now assign owner to folders and files in the WebMail Lite PHP scripts folder. You should assign the same owner other folders/files in <b>/var/www/html/</b> have (assuming they have the correct owner set).
+			<br><br>
+			Assign owner to folders:<br>
+			<b>find . -type d -exec chown root.root {} \;</b>
+			<br><br>
+			and to files:<br>
+			<b>find . -type f -exec chown root.root {} \;</b>
+			<br><br>
+			Then, change the current directory to the WebMail Lite PHP <b>data</b> folder (by default, it's a sub-folder of the folder which contains WebMail Lite PHP scripts):<br>
+			<b>cd /var/www/html/webmail/data</b>
+			<br><br>
+			Now assign rights to folders and files in <b>data</b> folder.
+			<br><br>
+			Assign rights to folders:<br>
+			<b>find . -type d -exec chmod 755 {} \;</b>
+			<br><br>
+			and to files:<br>
+			<b>find . -type f -exec chmod 644 {} \;</b>
+			<br><br>
+			Then, assign owner (usually, apache.apache) to folders and files in the WebMail Lite PHP <b>data</b> folder. Please note, Apache may be sometimes started under another user account (for example, under nobody.nogroup).
+			<br><br>
+			Generally speaking, with setting the correct owner on <b>data</b> folder you will make sure Apache process (httpd) has read/write permissions to that folder. Thus, you should set the user account running Apache as the owner of <b>data</b> folder contents.
+			<br><br>
+			Assign owner to folders:<br>
+			<b>find . -type d -exec chown apache.apache {} \;</b>
+			<br><br>
+			and to files:<br>
+			<b>find . -type f -exec chown apache.apache {} \;</b>
+			<br><br>
+			If the permission settings described above don't work for you, you may try to repeat "Assigning owners/permissions" step, but use <b>777</b> instead of <b>755</b> and <b>666</b> instead of <b>644</b> (although this is less secure).
+			<br><br>
+			
+			<h4>Assigning permissions through cPanel/Plesk or other hosting control panel.</h4>
+			If your hosting control panel provides some kind of a file manager, i.e. a tool which shows you all files and folders and allows you to set set permissions for files and folders, you should set the following permissions:
+			<br><br>
+			<table>
+				<tr>
+					<th>object</th>
+					<th>numeric</th>
+					<th>flagged</th>
+					<th>user-friendly</th>
+				</tr>
+				<tr>
+					<td>data folder and all its subfolders</td>
+					<td>755</td>
+					<td>-rwxr--r--</td>
+					<td>owner: read, write, navigate<br>
+						group: read<br>
+						others: read</td>
+				</tr>
+				<tr>
+					<td>all files in the data folder and all its subfolders</td>
+					<td>644</td>
+					<td>-rw-r--r--</td>
+					<td>owner: read, write<br>
+						group: read<br>
+						others: read</td>
+				</tr>
+			</table>
+			<br><br>
+			The table demonstrates the same permissions in three different notations. These are the same permissions, you should choose the notation most convenient and clear to you.
+			<br><br>
+			If the above permissions don't work for you, please try the following ones:
+			<br><br>
+			<table>
+				<tr>
+					<th>object</th>
+					<th>numeric</th>
+					<th>flagged</th>
+					<th>user-friendly</th>
+				</tr>
+				<tr>
+					<td>data folder and all its subfolders</td>
+					<td>777</td>
+					<td>-rwxrwxrwx</td>
+					<td>owner: read, write, navigate<br>
+						group: read, write, navigate<br>
+						others: read, write, navigate</td>
+				</tr>
+				<tr>
+					<td>all files in the data folder and all its subfolders</td>
+					<td>666</td>
+					<td>-rw-rw-rw-</td>
+					<td>owner: read, write<br>
+						group: read, write<br>
+						others: read, write</td>
+				</tr>
+			</table>
+			<br><br>
+			<h4>Assigning permissions through FTP.</h4>
+			Sometimes it's possible to assign necessary permissions through FTP after uploading files. This works if all of the below is true:
+			<ul>
+				<li>your FTP server allows clients to change permissions. Most Linux FTP servers allow this by default, but the system administrator of the server can disable this.</li>
+				<li>your FTP client application allows you to assign permissions. Please refer to your FTP client documentation to learn if it's possible and how to do this.</li>
+			</ul>
+			<br>
+			You should assign the same permissions as in case of control panel.
+			<br><br>
+		</li>
+		
+		<li>
+			Open <b>http://your_server_name/webmail/adminpanel/install.htm</b> page in your browser and follow the instructions. 
+			<br><br>
+		</li>
+		<li>
+			After completing the instructions of the installer, you'll be redirected into AdminPanel (<b>http://your_server_name/webmail/adminpanel</b>). There, you can then customize your login form, create/delete/edit domains and users, or otherwise configure WebMail Lite. <font style="color:red">Don't forget to delete install.htm file from the WebMail Lite PHP scripts folder</font>.
+			<br><br>
+		</li>
+		<li>
+			Now the installation is complete, WebMail Lite is ready to use. Start using it at <b>http://your_server_name/webmail/index.php</b>.
+			<br><br>
+		</li>
+	</ol>
+	<br />
+	
+	<a name="WIN"></a>
+	<h2>WebMail Lite PHP Installation Instructions for Windows</h2>
+	<ol>
+		<li>
+			Uploading the application.
+			<br><br>
+			Unzip and upload the contents of <b>webmail</b> folder (the scripts, folders and other files of the application) from the installation package onto your web server. Let's assume you created a folder <b>webmail</b> in the root of your web space (web root) and placed the contents of the <b>webmail</b> folder there. This way, you'll be able to access the application through the web at the <b>http://your_domain/webmail</b> URL.
+			<br><br>
+			Examples (assuming you want to use <b>webmail</b> name for the target folder):
+			<ul>
+				<li>in case of Remote Desktop access to a <b>dedicated server</b>, the web root usually looks like <b>C:\Inetpub\wwwroot\</b>. Thus, you should create <b>C:\Inetpub\wwwroot\webmail</b> folder and place the application files/folders there.</li>
+				<li>in case of uploading via FTP on a <b>shared hosting</b>, the web root is usually something like <b>/wwwroot</b> and you should create and upload into <b>/wwwroot/webmail</b> folder.</li>
+			</ul>
+			<br><br>
+		</li>
+		<li>
+			Protecting your private data from non-authorized access (for IIS only)
+			
+			<font style="color:red">This step is not necessary in case of Apache web server as the data folder is protected by its .htaccess file.</font>
+			<br><br>
+			Because WebMail data folder may contain your messages and temporary files with your private data, it needs to be protected from direct web access. But it's placed in WebMail <b>data</b> folder by default. So, to secure your data folder, move it (from your WebMail folder you created one the 1st step) to a place inaccessible from web. <font style="color:red">This should prevent non-authorized access to your private data.</font>
+			<br><br>
+			In case of Remote Desktop access to a <b>dedicated server</b>, it may be <b>C:\Inetpub\webmail_data</b><br>
+			In case of uploading via FTP on a <b>shared hosting</b>, it's usually <b>/webmail_data</b>
+			<br><br>
+			After that, you'd need to adjust the path to the <b>data</b> folder in <b>inc_settings_path.php</b> file. If you don't know correct absolute path (e.g. <b>C:\Inetpub\webmail_data</b>) or the new path doesn't work for you, please refer to <a target="_blank" href="http://www.afterlogic.com/support/faq-webmail-lite-php#2">this</a> FAQ topic.
+			<br><br>
+		</li>
+		<li>
+			Assigning owners/permissions on the filesystem.
+			<br></br>
+			Skip "Assigning owners/permissions" step if all of the following is true:
+			<ul>
+				<li>you only have FTP access to your server;</li>
+				<li>you do not have a web control panel (like WHM or Plesk) at all or it does not allow setting permissions;</li>
+				<li>you have no other options to set permissions.</li>
+			</ul>
+			In all of the above is true (usually, shared hosting with preconfigured permissions), the permissions should be OK but if they are not and the hosting provider does not allow you to set them, you will need to contact their support to do this for you.
+			<br><br>
+			<a name="remote-desktop-direct-access"></a>
+			<h4>Assigning permissions through Remote Desktop or direct access.</h4>
+			The following steps allow you to assign necessary permissions:
+			<ul>
+				<li>using Windows Explorer, navigate to the folder which contains the <b>data</b> folder;</li>
+				<li>in the context menu, choose "<b>Properties</b>" of the <b>data</b> folder and "<b>Security</b>" tab;</li>
+				<li>add <b>Internet Guest Account</b> (usually <b>IUSR_...</b>) into the list;</li>
+				<li>tick "<b>Allow full control</b>" checkbox to grant permissions and press "<b>OK</b>".</li>
+			</ul>
+			<br><br>
+			Try using your WebMail after that. If assigning the permissions doesn't seem to have any effect, repeat the same steps, but instead of granting "<b>Full Control</b>" to <b>Internet Guest Account</b> (usually <b>IUSR_...</b>) account, grant the same permission to Everyone user. This is quite secure as your data folder is already protected from direct access from web in step 2.
+			<br><br>
+			<h4>Assigning permissions through WHM or other hosting control panel.</h4>
+			If your hosting control panel provides some kind of a file manager, i.e. a tool which shows you all files and folders and allows you to set set permissions for files and folders, you should set the same permissions as in case of <a href="#remote-desktop-direct-access">Remote Desktop or direct access</a>.
+			<br><br>
+		</li>
+		<li>
+			Open <b>http://your_server_name/webmail/adminpanel/install.htm</b> page in your browser and follow the instructions. 
+			<br><br>
+		</li>
+		<li>
+			After completing the instructions of the installer, you'll be redirected into AdminPanel (<b>http://your_server_name/webmail/adminpanel</b>). There, you can then customize your login form, create/delete/edit domains and users, or otherwise configure WebMail Lite. <font style="color:red">Don't forget to delete install.htm file from the WebMail Lite PHP scripts folder</font>.
+			<br><br>
+		</li>
+		<li>
+			Now the installation is complete, WebMail Lite is ready to use. Start using it at <b>http://your_server_name/webmail/index.php</b>.
+			<br><br>
+		</li>
+		
+	</ol>
+	<br />
+</body>
+</html>

@@ -1,0 +1,136 @@
+<cpanel Branding="include(stdheader.html)">
+<cpanel Email="check_roundcube()">
+<style>
+.disable_autoload {
+    color: #C43234;
+}
+.autoload {
+    border: 1px dotted #777;
+}
+.autoloadlink {
+    padding-top: 5px;
+}
+</style>
+<script>
+var thisTheme = "<cpanel print="$CPDATA{'RS'}">";
+var NVData={};
+<?cp NVData::get(NVData.%=unescape\{leftparenthesis}'%'\{rightparenthesis};,name,^value) encoded=1,names=webmail_autoload_numseconds|webmailclient ?>
+isWebMail = 1;
+var webmailclients = {};    
+</script>
+
+
+<div align="center">
+<p><cpanel langprint="cpanel-loggedin"> <span class="status"><cpanel print="$authuser"></span></p>
+</div>
+<br><br>
+
+<div align="center">
+<table align=center width="700" border="0">
+<tr align="center">
+
+<!-- cpanelfeature aft_webmail -->
+<cpanelfeature webmail>
+
+<script>webmailclients['aft_webmail'] = {name:'WebMail Lite',uri:'/wm/cpanel_integration/cpanel.php'};</script>
+
+		
+<td align="center" valign="bottom" id="aft_webmail_cell">
+    <a href="/wm/cpanel_integration/cpanel.php"><img src="/wm/cpanel_integration/cpanelwmlogo.png" border="0"></a><br />
+
+    <a href="/wm/cpanel_integration/cpanel.php"><cpanel langprint="ReadMailUsing"> WebMail Lite</a>
+
+		
+    <div class="autoloadlink"  id="aft_webmail_auto"><a href="#" onClick="webmailselect_setdefaultclient('aft_webmail');return false;"></a></div>
+</td>
+</cpanelfeature>
+
+</tr>
+
+
+</table>
+<br />
+<div id="no_auto"></div>
+<br />
+<table align="center" width="80%" cellspacing="3" cellpadding="5" border="0">
+<cpanelif !$authuser==$user>
+<tr>
+<cpanelfeature popaccts>
+    <td >
+		<div valign="top" align="center"> 
+			<a href="mail/passwdpop.html?redirectdomain=&email=<cpanel sprint="$authuser,@,0">&domain=<cpanel print="$CPDATA{'DNS'}">"><img src="<cpanel Branding="image(password)">" border="0" /></a><br><a href="mail/passwdpop.html?redirectdomain=&email=<cpanel sprint="$authuser,@,0">&domain=<cpanel print="$CPDATA{'DNS'}">"><cpanel langprint="ChangePassWebmail"></a>
+		</div>
+	</td>
+</cpanelfeature>
+
+<cpanelfeature forwarders>
+    <td >
+		<div valign="top" align="center">
+			<a href="mail/fwds.html"><img src="<cpanel Branding="image(forwardersemail)">" border="0" /></a><br><a href="mail/fwds.html"><cpanel langprint="EAFwdWebmail"></a>
+		</div>
+	</td>
+</cpanelfeature>
+	
+<cpanelfeature autoresponders>
+	<td >
+		<div valign="top" align="center">
+			<a href="mail/autores.html"><img src="<cpanel Branding="image(responder)">" border="0" /></a><br /><a href="mail/autores.html"><cpanel langprint="EmailAutoWebmail"></a>
+		</div>
+	</td>
+</cpanelfeature>
+</cpanelif>
+
+    <td>
+		<div valign="top" align="center">
+			<a href="mail/clientconf.html?domain=<cpanel print="$CPDATA{'DNS'}">&redirectdomain=&acct=<cpanel print="$authuser">"><img src="<cpanel Branding="image(manageaccounts)">" border="0"></a><br /><a href="mail/clientconf.html?domain=<cpanel print="$CPDATA{'DNS'}">&redirectdomain=&acct=<cpanel print="$authuser">"><cpanel langprint="ConfigWebmail"></a>
+		</div>
+	</td>
+	
+<cpanelif !$CONF{'skipboxtrapper'} $CPDATA{'FEATURE-BOXTRAPPER'}>
+<cpanelfeature boxtrapper>
+    <td>
+		<div valign="top" align="center">
+			<a href="mail/manage.html?account=<cpanel print="$authuser">"><img src="<cpanel Branding="image(boxtrapper)">" border="0" /></a><br><a href="mail/manage.html?account=<cpanel print="$authuser">"><cpanel langprint="prog-BoxTrapper"></a>
+		</div>
+	</td>
+</cpanelfeature>
+</cpanelif>
+	
+<cpanelfeature traceaddy>
+    <td>
+		<div valign="top" align="center">
+			<a href="mail/route.html"><img src="<cpanel Branding="image(emailroute)">" border="0" /></a><br /><a href="mail/route.html"><cpanel langprint="EmailDelWebmail"></a>
+		</div>
+	</td>
+</cpanelfeature>
+
+<cpanelif !$authuser==$user>
+<cpanelfeature blockers>
+    <td>
+		<div valign="top" align="center">
+			<a href="mail/filters/userfilters.html"><img src="<cpanel Branding="image(ufiltering)">" border="0" /></a><br /><a href="mail/filters/userfilters.html"><cpanel langprint="MENUFiltering"></a>
+		</div>
+	</td>
+</cpanelfeature>
+</cpanelif >
+
+<cpanelif $CONF{'SecurityPolicy::SecurityQuestions'}>
+	<td>
+		<div valign="top" align="center">
+			<a href="security/index.html"><img src="<cpanel Branding="image(sec_policy)">" border="0" /></a><br /><a href="security/index.html"><cpanel langprint="SecurityPolicy"></a>
+		</div>
+	</td>
+</cpanelif>
+ </tr>
+</table>
+</div>
+<cpanelif $authuser==$user>
+<br />
+<br />
+<div align="center" style="margin: 0 auto;">
+  [ <a href="/xfercpanel/"><cpanel langprint="ReturncPanel"></a> ]
+</div>
+</cpanelif>
+<br />
+<cpanel Branding="include(webmailselect-pop.html)">
+<cpanel Branding="include(stdfooter.html)">

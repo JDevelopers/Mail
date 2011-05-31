@@ -1,0 +1,4302 @@
+html 
+{
+	height:100%;
+}
+
+body
+{
+	font: normal 11px Tahoma;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	background: #fff; 
+	height:expression((document.getElementsByTagName('body')[0].offsetHeight < document.getElementsByTagName('html')[0].offsetHeight) ? '100%' : '');
+	min-height:100%;
+	position:relative;
+}
+
+.wm_body
+{
+	background: White;
+}
+
+.wm_space_before
+{
+	padding-top: 10px;
+}
+
+textarea {
+	resize: none;
+}
+
+label
+{
+	cursor: pointer;
+	cursor: hand;
+	vertical-align: middle;
+	margin-left: 4px;
+}
+
+.wm_settings_common label
+{
+	margin-right: 10px;
+}
+
+img
+{
+	border: 0;
+}
+
+td
+{
+	padding: 0;
+	margin: 0;
+}
+
+table
+{
+	padding: 0;
+	margin: 0;
+	border-collapse: collapse;
+	border-width: 0px;
+}
+
+form
+{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+.wm_for_ie_select
+{
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.wm_logo
+{
+	height: 1px;
+	border: 0;
+	overflow: hidden;
+	outline: none;
+}
+
+.wm_print
+{
+	border-collapse: collapse;
+	width: 96%;
+}
+
+.wm_print_title, .wm_print_value, .wm_print_body
+{
+	padding: 4px;
+	border-color: #666666;
+	border-style: solid;
+	font: normal 11px Tahoma, Arial, Helvetica, sans-serif;
+	text-align: left;
+}
+
+.wm_print_title
+{
+	border-width: 0px 1px 1px 0px !important;
+}
+
+.wm_print_value
+{
+	border-width: 0px 0px 1px 1px !important;
+}
+
+.wm_print_body
+{
+	border-width: 1px 0px 0px 0px !important;
+}
+
+.wm_content
+{
+	/* background: url(header.png) no-repeat right top; */
+}
+
+.wm_checkbox
+{
+	padding: 0;
+	margin: 0;
+	vertical-align: middle;
+}
+
+a.wm_reg, .wm_input, .wm_input_focus, .wm_file, .wm_button
+{
+	font: normal 13px Tahoma, Arial, Helvetica, sans-serif;
+	color: black;
+}
+
+.wm_button
+{
+	padding: 1px 4px;
+	cursor: pointer;
+	cursor: hand;
+	font-weight: bold;
+}
+
+.wm_delete_button .wm_button
+{
+	$padding: 1px 0;
+	font-size: 11px;
+}
+
+.wm_go_button
+{
+	font: bold 12px Tahoma, Arial, Helvetica, sans-serif;
+	cursor: pointer;
+	cursor: hand;
+	padding: 0 4px;
+}
+
+.wm_input, .wm_input_focus
+{
+	border: solid 1px #ccc;
+	padding-left:3px;
+}
+
+.wm_file
+{
+	height: 23px;
+	width: auto;
+}
+
+.wm_control_img, .wm_control
+{
+	cursor: pointer !important;
+	cursor: hand !important;
+}
+
+.wm_control span
+{
+	padding-left:4px;
+}
+
+.wm_background
+{
+	width: 100%
+}
+
+a.wm_reg
+{
+	padding: 0 4px 0 0;
+	text-decoration: underline;
+}
+
+a.wm_reg:hover
+{
+	text-decoration: underline;
+}
+
+.wm_hide
+{
+	display: none;
+}
+
+.wm_unvisible
+{
+	visibility: hidden;
+}
+
+/*tips*/
+.wm_tip
+{
+	background: #FFFFD5;
+	border: solid 1px #D5CDC4;
+	color: Black;
+	font: normal 12px Tahoma, Arial, Helvetica, sans-serif;
+	height: 30px;
+	position: absolute;
+}
+
+.wm_tip td
+{
+	vertical-align: top;
+}
+
+.wm_tip_arrow
+{
+	background: transparent url(mail.png) no-repeat scroll -600px -160px;
+	height: 20px;
+	left: -11px;
+	position: relative;
+	top: 4px;
+	width: 11px;
+}
+
+.wm_tip_icon
+{
+	background: transparent url(mail.png) no-repeat scroll -560px -160px;
+	height: 14px;
+	left: 6px;
+	position: relative;
+	top: -12px;
+	width: 28px;
+}
+
+.wm_tip_message
+{
+	left: 0;
+	margin: 0 10px 0 32px;
+	position: relative;
+	top: -16px;
+}
+/*--tips*/
+
+/*connection screen*/
+.wm_connection_info
+{
+	background: #8F8E8E;
+	border: 1px solid #505050;
+	margin: 70px 10px 80px 10px;
+}
+
+.wm_connection_header
+{
+	padding: 2px;
+	height: 28px;
+	border: solid #CCCCCC;
+	border-width: 1px 0px;
+	/*background: #535C68 url(gradients.png) repeat-x 0px -160px;*/
+	background:#EF4A4A;
+	color: #fff;
+	font: bold 14px Tahoma, Arial, Helvetica, sans-serif;
+	text-align: center;
+}
+.wm_connection_header span {
+	display:-moz-inline-box;
+	display:inline-block;
+	vertical-align:middle;
+	background:#EF4A4A url(wait.gif) no-repeat 0px 0px;
+	width:20px;
+	height:20px;
+	margin:0px 0px 0px 6px;
+}
+.wm_connection_icon
+{
+	width: 40px;
+	/*background: url(wait.gif) no-repeat right 32px;*/
+}
+
+.wm_connection_empty
+{
+	width: 40px;
+}
+
+.wm_connection_message
+{
+	padding: 10px;
+	font: normal 14px Verdana, Arial, Tahoma, sans-serif;
+	text-align: center;
+}
+
+.wm_connection_progressbar
+{
+	height: 25px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+/*--connection screen*/
+
+/*information*/
+table.wm_connection_information
+{
+	background:#F9F9F9 none repeat scroll 0 0;
+	border:1px solid #C3C3C3;
+}
+table.wm_connection_information.wm_information
+{
+	background:none;
+	border:0px;
+}
+
+.wm_info_block {
+	position:relative;
+	padding:0px 2px 3px 2px;
+	zoom:100%;
+	overflow:hidden;
+}
+
+.wm_info_message
+{
+	position:relative;
+}
+.wm_shadow {
+	background:#555;
+	opacity: 0.1;
+	filter:Alpha(opacity=10);
+}
+
+.wm_information .a, .wm_information .b
+ {
+	height:1px;
+	$height:auto;
+	line-height:1px;
+	background:#aaa;
+	margin:0px 2px;
+}
+.wm_information .a
+{
+	margin:0px 1px;
+	background: #f9f9f9;
+	border-left:1px solid #aaa;
+	border-right:1px solid #aaa;
+}
+.wm_report_information .b {
+	background:#98ca85;
+}
+
+.wm_information .wm_shadow .a, .wm_information .wm_shadow .b
+{
+	background:#555;
+	height:1px;
+	line-height:1px;
+	margin:0px;
+	$height:auto;
+	filter:Alpha(opacity=10);
+}
+
+.wm_information .wm_shadow .a
+{
+	border-left:1px solid #DDD;
+	border-right:1px solid #DDD;
+}
+
+.wm_information .wm_shadow .b
+{
+	border-left:2px solid #DDD;
+	border-right:2px solid #DDD;
+}
+
+.wm_status_information, .wm_loading_information,
+.wm_error_information, .wm_report_information, .wm_connection_information
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 50;
+	overflow: hidden;
+	padding: 0px 2px 2px 2px;
+}
+
+.wm_info_message
+{
+	padding: 6px !important;
+	font: normal 12px Tahoma;
+	color: Black;
+	text-align: center;
+	vertical-align: middle;
+	border-left: solid 1px #c3c3c3;
+	border-right: solid 1px #c3c3c3;
+	background:#f9f9f9;
+}
+.wm_info_message span {
+	margin:0px 10px 0px 16px;
+	display: block;
+}
+
+.wm_error_information .wm_info_message span {
+	margin: 0px 16px;
+}
+
+.wm_report_information .wm_info_message, .wm_report_information  .a {
+	background: #d9edd1;
+	border-left: 1px solid #98ca85;
+}
+
+.wm_error_information .wm_info_message, .wm_error_information  .a {
+	background: #FFFFd5;
+	border-left: 1px solid #B5AD94;
+}
+
+.wm_connection_information .wm_info_message, .wm_loading_information .wm_info_message
+{
+	padding: 6px 10px;
+}
+
+.wm_connection_information .wm_progressbar, .wm_loading_information .wm_progressbar
+{
+	margin: 6px auto 0px;
+}
+
+.wm_info_image
+{
+	background-image: url(mail.png);
+	background-repeat: no-repeat;
+	background-position: -520px -120px;
+	width: 10px;
+	height: 14px;
+	float:left;
+}
+
+.wm_close_info_image
+{
+	background-image: url(mail.png);
+	background-repeat: no-repeat;
+	background-position: -480px -120px;
+	height: 11px;
+	position: absolute;
+	right: 2px;
+	top: 2px;
+	width: 11px;
+}
+
+.wm_info_progressbar
+{
+	padding-bottom: 4px;
+	height: 15px;
+	text-align: center;
+}
+/*--information*/
+
+/*login dialog*/
+#dummy {
+	height:70px;
+}
+#login_screen {
+	padding: 20px 0px 0px;
+}
+
+.wm_login
+{
+	padding: 0px 0px 20px 0px;
+	color: #535C68;
+	font: normal 11px Tahoma, Arial, Helvetica, sans-serif;
+	width: 336px;
+	table-layout: auto;
+	background: none; 
+}
+#advanced_fields {
+	background:#f7f7f7;
+	border-top:1px solid #ddd;
+	border-bottom:1px solid #fff;
+	margin-top:4px;
+}
+.wm_login #domain{
+	font-size:12px;
+}
+.wm_login_switcher #login_mode_switcher {
+	color:#ACB0B3;
+}
+.wm_login_switcher #login_mode_switcher:hover {
+	color:#505050;
+	text-decoration:underline;
+}
+.login_table{
+	background: #f4f6f8 url(gradients.png) repeat-x 0px -714px;
+}
+.login_table table {
+	border-collapse:separate;
+	width:310px;
+}
+.wm_login .a, .wm_login .b {
+	margin:0px 2px;
+	height:1px;
+	overflow:hidden;
+	background:#fff;
+}
+.wm_login .b {
+	margin:0px 1px;
+	background:#f4f6f8;
+	border-right: solid 0px #fff;
+	border-left: solid 0px #fff;
+}
+.wm_login .a.top, .wm_login .b.top {
+	background:#EF4A4A;
+	border: solid #c3c3c3;
+	border-width:0px;
+}
+#inc_server, #out_server 
+{
+	width: 80px;
+}
+
+#inc_port, #out_port 
+{
+	width: 30px;
+}
+
+#inc_protocol {
+	width: 65px;
+}
+
+.wm_login td
+{
+	padding: 4px 4px 4px 2px;
+	text-align: left;
+}
+
+.wm_title
+{
+	text-align: right !important;
+	font-size: 12px;
+}
+
+.wm_login_header
+{
+	border: solid #c3c3c3;
+	border-width: 0px;
+	background: #EF4A4A none;
+	color: #fff;
+	text-align: center !important;
+	padding: 6px 1px;
+	font-weight: bold;
+	font-size: 12px;
+}
+.wm_login_content {
+	border-right:1px solid #fff;
+	border-left:1px solid #fff;
+	padding:4px 0px 10px;
+}
+.wm_login .wm_input, .wm_login .wm_input_focus, .wm_advanced_input, .wm_advanced_input_focus
+{
+	color: black;
+	border: solid 1px #BEBDBD;
+	background: White;
+}
+
+.wm_login .wm_input, .wm_login .wm_input_focus
+{
+	font: normal 12px Arial;
+	width: 220px;
+}
+
+.wm_password_input
+{
+	letter-spacing: 1px;
+}
+
+.wm_advanced_input_focus, .wm_login .wm_input_focus
+{
+	background: #FFFFE5;
+}
+
+.wm_login .wm_input, .wm_login .wm_input_focus
+{
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.wm_advanced_input, .wm_advanced_input_focus
+{
+	font-size: 13px;
+}
+
+.wm_login_switcher
+{
+	padding-top: 4px;
+	display: block;
+}
+
+.wm_login_button
+{
+	display: block;
+	float: right;
+}
+
+.wm_login_error {
+	font: normal 12px Tahoma, Arial, Helvetica, sans-serif;
+	width: 270px;
+	background: #ffffd5;
+	border: 1px solid #D5CDC4;
+	text-align: left;
+	margin-bottom:20px;
+}
+
+.wm_login_error_icon
+{
+	background: transparent url(mail.png) no-repeat scroll -520px -160px;
+	float: left;
+	height: 14px;
+	margin: 10px;
+	width: 14px;
+}
+
+.wm_login_error_message
+{
+	padding: 10px;
+}
+.wm_reg_link {
+	display:-moz-inline-box;
+	display:inline-block;
+	color:#7C8083;
+	font:normal 14px Tahoma,Arial,Helvetica,sans-serif;
+	text-decoration:underline;
+	margin:35px 0px 0px;
+}
+.wm_reg_link:hover, .wm_recover_link:hover {
+	color:#d71717;
+	color:#555;
+	cursor:pointer;
+}
+.wm_recover_link {
+	float:right;
+	font-size:11px;
+	color:#ACB0B3;
+	text-decoration:underline;
+	margin-top:-6px;
+}
+/*--login dialog*/
+
+/*accounts panel*/
+.wm_accountslist
+{
+	width: 100%;
+	height: 70px;
+	padding: 0;
+	margin: 0;
+	background: none;
+	/*requires that when switching from a skin 
+	Hotmail_Style to Afterlogic not remain 
+	border of Hotmail_style*/
+	border-style: none;
+	border-width: 0px;
+	font: 11px Tahoma, Arial, Helvetica, sans-serif;
+	
+}
+
+.wm_accountslist td
+{
+	vertical-align: middle;
+	background: url("webmail-icon.png") no-repeat left center;
+	padding:0px 0px 0px 52px;
+}
+
+.wm_active_tab a, .wm_active_tab a:hover
+{
+	color: #fe0000 !important;
+}
+
+.wm_accountslist_email, .wm_accountslist_contacts
+{
+	display: block;
+	float: left;
+	font-weight: bold;
+	border: 0;
+	border-left: solid 1px #bbb;
+	background: none;
+	padding: 0px 8px 0px;
+	height: 18px;
+	margin-top:12px;
+	font-size:14px;
+}
+
+.wm_accountslist_email
+{
+	border-left: 0;
+	background: none;
+	margin-left: 0px;
+	display:inline;
+	position:relative;
+	z-index:9;
+	height:20px;
+}
+
+.wm_accountslist_selection, .wm_accountslist_selection_over, .wm_accountslist_selection_press
+{
+	display: block;
+	float: left;
+	padding: 0px 6px 0px 0px;
+	margin:12px 0px 0px 0px;
+	border: 0;
+	background-image: url(mail.png);
+	background-repeat: no-repeat;
+	width: 26px;
+	height: 18px;
+	position:relative;
+	z-index:9;
+}
+
+.wm_accountslist_selection {
+	background-position: 0px -160px;
+}
+
+.wm_accountslist_selection_over {
+	background-position: -80px -160px;
+}
+
+.wm_accountslist_selection_press {
+	background-position: -40px -160px;
+}
+
+.wm_accountslist_selection_none
+{
+	display: block;
+	float: left;
+	padding: 0;
+	border: 0;
+	width: 0px;
+	height: 18px;
+}
+
+.wm_accountslist_settings, .wm_accountslist_logout
+{
+	display: block;
+	float: right;
+	margin: 0px 0px 25px;
+	padding: 0px 8px;
+	height: 15px;
+	font-weight: normal;
+	border: 0;
+	background: none;
+}
+.wm_accountslist_logout
+{
+	border-left: solid 1px #ccc;
+}
+
+.wm_accountslist a
+{
+	color: #575454;
+	text-decoration: none;
+}
+
+.wm_accountslist a:hover
+{
+	color: #e60000;
+	text-decoration: underline;
+}
+
+.wm_account_menu
+{
+	background: #fff;
+	color: #555;
+	font: bold 14px Tahoma, Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-top: -30px;
+	cursor: hand;
+	text-align: left;
+	z-index: 3;
+	border:1px solid #ccc;
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+	padding-top: 30px;
+	z-index: 8;
+}
+.wm_account_menu div
+{
+	padding: 6px 7px;
+}
+
+.wm_account_item, .wm_account_item_over
+{
+	border: 0;
+	border-top: 0px solid #ddd;
+	padding: 0px !important;
+	display: inline;
+	$display: block;
+	z-index: 3;
+	cursor: pointer;
+}
+
+.wm_toolbar_item span, .wm_toolbar_item_over span, .wm_toolbar_item_press span
+{
+	text-decoration: none;
+	padding:8px 8px 0px;
+	height:20px;
+	display:-moz-inline-box;
+	display:inline-block;
+	vertical-align:top;
+}
+
+.wm_tb .wm_toolbar_item span.wm_control_icon,
+.wm_tb .wm_toolbar_item_over span.wm_control_icon,
+.wm_tb_press .wm_toolbar_item span.wm_control_icon
+{
+	margin: 0px !important;
+	/* padding: 2px 8px 2px 8px !important; */
+}
+
+.wm_account_item_over
+{
+	color: #e60000;
+	text-decoration: underline;
+	background: none;
+}
+/*--accounts panel*/
+
+/*toolbar panel*/
+.wm_toolbar
+{
+	width: 100%;
+	background: #EF4A4A;
+	font: bold 11px Arial,Geneva,Helvetica,Verdana,sans-serif;
+	color: White;
+	border: solid #4a4a4a;
+	border-width: 0px;
+	text-align:left;
+}
+#layout_3pane .wm_toolbar {
+	position:relative;
+}
+
+.wm_toolbar_content {
+	display: -moz-inline-box;
+	display: inline-block;
+	float:left;
+}
+#layout_3pane .wm_toolbar_content {
+	float:none;
+}
+.wm_folders_part .wm_toolbar {
+	text-align:center;
+	overflow:hidden;
+}
+.wm_folders_part .wm_toolbar_content {
+	border-left:1px solid #EF8686;
+}
+
+.wm_toolbar_item
+{
+	background: #EF4A4A;
+}
+
+.wm_toolbar_item, .wm_toolbar_item_inactive, .wm_toolbar_item_press, .wm_toolbar_item_over
+{
+	margin:0px;
+	padding: 6px 4px 2px;
+	padding: 0px;
+	/* height: 20px; */
+	border-left:0px;
+	border-right:1px solid #EF8686;
+	vertical-align: top;
+}
+.wm_toolbar_item_disabled
+{
+	cursor: default !important;
+	color:#fFa6a6 !important;
+}
+.wm_toolbar_item_inactive
+{
+	cursor: default !important;
+}
+
+.wm_toolbar_search_item
+{
+	float: right;
+	height:24px;
+	padding: 4px 2px 0px;
+	/* margin: 1px 0px !important; */
+}
+
+.wm_toolbar_item_over
+{
+	/* padding: 6px 4px 2px;
+	height: 20px; */
+	background: #e60000;
+	color:#fff;
+}
+.wm_tb_press .wm_toolbar_item
+{
+	background: #e60000;
+}
+.wm_toolbar_search_item_over
+{
+	float: right;
+	padding: 4px 2px 0px;
+	height: 24px;
+
+	background: #e60000;
+	border: solid 0px #70bfef;
+}
+
+.wm_toolbar_item_press
+{
+	/* height: 20px; */
+	margin: 0;
+	background: #e60000;
+	color: White;
+}
+
+.wm_toolbar_item, .wm_toolbar_item_over, .wm_toolbar_item_press,
+.wm_toolbar_search_item, .wm_toolbar_search_item_over
+{
+	white-space: nowrap;
+	cursor: pointer;
+	display:-moz-inline-box;
+	display:inline-block;
+}
+.wm_toolbar_icon
+{	
+	display:none !important;
+}
+
+.wm_search_icon, .wm_navigate_icon, .wm_search_icon_standard, .wm_search_icon_advanced
+{	
+	background-image: url(mail.png);
+	background-repeat: no-repeat;
+	margin: 0px;
+	width: 14px;
+	height: 20px;
+	display: -moz-inline-box;
+	display: inline-block;
+	vertical-align: middle;
+}
+.wm_search_icon_standard, .wm_search_icon_advanced {
+	width: 24px;
+	background-position: -560px 0px !important;
+}
+
+.wm_control_icon
+{
+	background-image: url(mail.png);
+	background-repeat: no-repeat;
+	cursor: hand;
+	cursor: pointer;
+	/* margin: 0px 0px 0px 2px; */
+	/* padding-left:2px  !important; */
+	width:8px;
+	/* height:20px; */
+}
+
+.wm_tb, .wm_tb_press {
+	padding: 0px !important;
+	margin: 0;
+	height: 28px;
+	border-left: 0px;
+	border-right: 1px solid #EF8686;
+	display: -moz-inline-box;
+	display: inline-block;
+}
+
+.wm_tb_press
+{
+	/* background: #068bc4;
+	color: #fff; */
+}
+
+.wm_tb .wm_toolbar_item,
+.wm_tb .wm_toolbar_item_inactive,
+.wm_tb .wm_toolbar_item_press,
+.wm_tb .wm_toolbar_item_over,
+.wm_tb_press .wm_toolbar_item,
+.wm_tb_press .wm_toolbar_item_inactive,
+.wm_tb_press .wm_toolbar_item_press,
+.wm_tb_press .wm_toolbar_item_over
+{
+	border-left: 0;
+	border-right: 0;
+}
+
+.wm_sort_popup_control
+{
+	border: 0;
+	height: 24px;
+	margin: 0px;
+	padding: 0 !important;
+	display:-moz-inline-box;
+	display:inline-block;
+	vertical-align:top;
+}
+.wm_sort_popup_control .wm_toolbar_item
+{
+	background: none;
+	border: 0;
+	color: Black;
+	height:16px;
+	padding:6px;
+}
+.wm_sort_popup_control .wm_control_icon
+{
+	background-position: 0 -240px;
+	width:16px;
+	height:20px;
+	padding:0px;
+}
+
+.wm_toolbar_separate
+{
+	float: left;
+	width: 1px;
+	height: 1px;
+}
+.wm_search_input
+{
+	background: #fff;
+	border: 1px solid #777;
+	display: -moz-inline-box;
+	display: inline-block;
+	font-size: 13px;
+	height: 18px;
+	margin: 0px 4px 0px 0px;
+	padding: 0px;
+	text-indent: 2px;
+	vertical-align: middle;
+	width: 120px;
+}
+.wm_search_form
+{
+	margin:-6px -5px 0px 0px;
+	padding: 2px 0 4px 2px;
+	position: absolute;
+	top: 91px;
+	right: 0;
+	border: solid 2px #AF4141;
+	background: #EF4A4A;
+	z-index: 3;
+}
+.wm_search_form table
+{
+	font: 12px Tahoma, Arial, Helvetica, sans-serif;
+	text-align: left;
+	color: #fff;
+}
+
+.wm_central_pane_view .wm_search_input
+{
+	background-position: -560px -240px;
+}
+.wm_central_pane_view .wm_search_icon_standard, .wm_central_pane_view .wm_search_icon_advanced
+{
+	background-position: -760px -240px !important;
+}
+.wm_central_pane_view { background-color: #EEEEF8; }
+.wm_central_pane_view .wm_toolbar_search_item_over { background-color: Transparent; }
+.wm_central_pane_view table { color: Black; }
+
+.wm_search_form select
+{
+	font-size: 10px;
+	width:150px;
+}
+
+.wm_search_form td
+{
+	padding: 4px;
+}
+
+.wm_search_title
+{
+	text-align: right;
+	width:154px;
+}
+
+.wm_search_value
+{
+	text-align: left;
+	width:154px;
+	white-space:nowrap !important;
+	
+}
+
+.wm_popup_menu, .wm_sort_popup_menu
+{
+	border: 0px;
+	background: #e60000;
+	color: #fff;
+	font: bold 11px Arial,Geneva,Helvetica,Verdana,sans-serif;
+	position: absolute;
+	cursor: hand;
+	cursor: pointer;
+	text-align: left;
+	z-index: 3;
+	overflow: auto;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.wm_sort_popup_menu div
+{
+	margin: 6px;
+}
+.wm_sort_popup_menu
+{
+	background: #EEEEF8;
+	border: solid 1px #617085;
+	color: Black;
+	font-weight: normal;
+}
+.wm_menu_separate
+{
+	z-index: 3;
+	padding-top: 1px;
+	border-top:1px solid #EF8686;
+	margin:0px 10px;
+}
+
+.wm_menu_item, .wm_menu_item_over, .wm_menu_item_spec, .wm_menu_item_over_spec, .wm_menu_item_importance, .wm_menu_item_over_importance
+{
+	padding: 2px 2px 2px 3px;
+	z-index: 3;
+	background: none;
+}
+.wm_popup_menu .wm_menu_item, .wm_popup_menu .wm_menu_item_over,
+.wm_popup_menu .wm_menu_item_spec, .wm_popup_menu .wm_menu_item_over_spec,
+.wm_popup_menu .wm_menu_item_importance, .wm_popup_menu .wm_menu_item_over_importance
+{
+	padding: 5px 12px;
+}
+.wm_menu_item_spec
+{
+	background:transparent;
+}
+
+.wm_menu_item_importance
+{
+	background: #58697E;
+}
+
+.wm_menu_item_over, .wm_menu_item_over_spec, .wm_menu_item_over_importance
+{
+	background: #EF4A4A;
+	color: White;
+}
+
+.wm_menu_item_over_spec {}
+
+.wm_toolbar_curve_inner,
+.wm_toolbar_curve_outer {
+	width: 1px;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	position:absolute;
+	top:0px;
+	background:#fff;
+	overflow:hidden;
+	height:1px;
+}
+
+.wm_toolbar_curve_left {
+	left:0px;
+}
+.wm_toolbar_new_message_left {
+}
+
+.wm_toolbar_curve_right, .wm_toolbar_new_message_right {
+	right:0px;
+}
+.wm_toolbar_curve_left, .wm_toolbar_new_message_left {
+	left:0px;
+}
+.wm_toolbar_curve_right.wm_toolbar_curve_outer,
+.wm_toolbar_new_message_right.wm_toolbar_curve_outer {
+	right:1px;
+}
+.wm_toolbar_new_message_left.wm_toolbar_curve_outer,
+.wm_toolbar_curve_left.wm_toolbar_curve_outer {
+	left:1px;
+}
+.wm_toolbar_curve_inner {
+	height:2px;
+}
+
+
+.wm_toolbar_curve_right + .wm_toolbar_item, .wm_toolbar_curve_right + .wm_toolbar_item_over, 
+.wm_toolbar_curve_right + .wm_tb, .wm_toolbar_curve_right + .wm_tb_over, .wm_toolbar_curve_right + .wm_tb_press
+{
+	border-left: 0 !important;
+}
+/*--toolbar panel*/
+
+/*page switcher*/
+.wm_inbox_page_switcher
+{
+	position: absolute;
+	top: 118px;
+	right: 16px;
+	font: normal 12px Tahoma, Arial, Helvetica, sans-serif;
+	z-index: 2;
+}
+
+.wm_inbox_page_switcher_left
+{
+	background-image: url(mail.png);
+	background-repeat: no-repeat;
+	background-position: -440px -160px;
+	width: 16px;
+	height: 20px;
+}
+
+.wm_inbox_page_switcher_right
+{
+	background: #f9f9f9;
+	border-top: solid 1px #c3c3c3;
+	position: absolute;
+	margin: -10px 0px 0px 0px;
+	width: 17px;
+	height: 19px;
+}
+
+.wm_inbox_page_switcher_borders
+{
+	background-image: url(gradients.png);
+	background-repeat: repeat;
+	background-position: 0px -650px;
+	background-color: #f9f9f9;
+	padding: 0px 0px 0px 4px;
+}
+
+.wm_inbox_page_switcher_pages
+{
+	color: #000000;
+	white-space: nowrap;
+}
+
+.wm_inbox_page_switcher_pages a
+{
+	padding: 0 2px 0 2px;
+	text-decoration: none;
+	font: normal 12px Tahoma, Arial, Helvetica, sans-serif;
+	color: #aaa;
+}
+
+.wm_inbox_page_switcher_pages font
+{
+	font: normal 12px Tahoma, Arial, Helvetica, sans-serif;
+	padding: 0 4px 0 4px;
+}
+
+.wm_page_switcher_first, .wm_page_switcher_prev, .wm_page_switcher_next, .wm_page_switcher_last
+{
+	margin-right: 2px;
+	display:-moz-inline-box;
+	display:inline-block;
+	vertical-align:middle;
+	background-image: url(mail.png);
+	background-repeat: no-repeat;
+	height:1em;
+}
+
+.wm_page_switcher_first, .wm_page_switcher_last {
+	width: 8px;
+}
+
+.wm_page_switcher_prev, .wm_page_switcher_next {
+	width: 6px;
+}
+
+.wm_page_switcher_first {
+	background-position: -280px -160px;
+	margin-left: 1px;
+}
+
+.wm_page_switcher_prev {
+	background-position: -400px -160px;
+}
+
+.wm_page_switcher_next {
+	background-position: -360px -160px;
+	margin-left: 1px;
+}
+
+.wm_page_switcher_last {
+	background-position: -320px -160px;
+}
+/*--page switcher*/
+
+/*mail container*/
+.wm_central_list_pane { margin: 0 7px 7px; }
+.wm_mail_container
+{
+	border: 0;
+	font: normal 11px Tahoma;
+}
+
+.wm_mail_container td
+{
+	vertical-align: top;
+	text-align: left;
+}
+
+.wm_vresizer_part
+{
+	text-align: left;
+}
+
+.wm_vresizer_width
+{
+	height: 1px;
+	width: 6px;
+	overflow: hidden;
+}
+
+.wm_vresizer, .wm_vresizer_press
+{
+	z-index: 2;
+	position: relative;
+	top: 0;
+	left: 1px;
+	overflow: hidden;
+}
+
+.wm_vresizer
+{
+	background: none;
+}
+
+.wm_vresizer_mess
+{
+	background: #e5e5e5;
+}
+
+.wm_vresizer_press
+{
+	background: #979899;
+}
+.wm_vresizer_part, .wm_hresizer_part
+{
+	border-right: 0px solid #ddd;
+	
+}
+
+.wm_hresizer_height
+{
+	width: 0;
+	height: 1px;
+	overflow: hidden;
+}
+
+.wm_hresizer, .wm_hresizer_press
+{
+	z-index: 1;
+	position: relative;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+
+.wm_hresizer
+{
+}
+
+.wm_hresizer_press
+{
+	background: #979899;
+}
+/*--mail container*/
+
+/*folders part*/
+.wm_folders_part
+{
+	overflow: hidden;
+	text-align: left;
+	margin: 0px;
+	border: solid #ccc;
+	border-width: 0px 1px 1px 0px;
+	background: #f9f9f9;
+}
+#layout_3pane  .wm_folders_part {
+	border:0px;
+}
+
+.wm_folders_basic_view
+{
+	background: none;
+}
+
+.wm_folder_direct_mode
+{
+	cursor: default;
+	font-size: 9px;
+	font-weight: normal;
+	color: #5D5C5C;
+	border: solid 1px #828282;
+}
+
+.wm_folders_list
+{
+	background-color: #f7f7f7;
+	border: 0px;
+	overflow: auto;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.wm_folders_basic_view .wm_folders_list
+{
+	border: solid #ccc;
+	border-width: 0px 1px;
+}
+
+.wm_folder, .wm_select_folder, .wm_folder_over
+{
+	outline: none;
+	padding: 1px 0px;
+	margin:0 8px;
+}
+#layout_3pane .wm_folder,
+#layout_3pane .wm_select_folder,
+#layout_3pane .wm_folder_over {
+	margin: 2px 2px;
+}
+
+.wm_select_folder, .wm_select_folder div {
+	/* background: url("gradients.png") repeat-x  0px -366px #E2E4E6; */
+	background: #71B8DA;
+	font-size: 12px;
+}
+/* #layout_3pane .wm_select_folder, #layout_3pane .wm_select_folder div {
+	background: #69A8F5;
+} */
+
+.wm_select_folder {
+	border-bottom:1px solid #71B8DA;
+	border-top:1px solid #71B8DA;
+	padding: 0;
+}
+#layout_3pane .wm_select_folder {
+	/* border-top: 1px solid #69A8F5;
+	border-bottom: 1px solid #69A8F5; */
+}
+
+.wm_folder .wm_folder_img, .wm_select_folder .wm_folder_img, .wm_folder_over .wm_folder_img
+{
+	background-image: url(mail.png);
+	background-repeat: no-repeat;
+	width: 21px;
+	height: 18px;
+	display: none;
+}
+
+.wm_folder div, .wm_select_folder div, .wm_folder_over div {
+	margin: 0 -1px;
+	padding: 4px 0;
+	white-space: nowrap;
+}
+
+.wm_clear_folder
+{
+	background-position: -480px -80px;
+	background-image: url(mail.png);
+	background-repeat: no-repeat;
+	cursor: pointer;
+	width:14px;
+	height:14px;
+	display:-moz-inline-box;
+	display:inline-block;
+	vertical-align:middle;
+}
+
+.wm_folder_name
+{
+	margin: 0 6px;
+	white-space: nowrap;
+	padding: 0;
+	height: 14px;
+	display: -moz-inline-box;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+input.wm_folder_name
+{
+	$left: 16px;
+}
+
+.wm_folders_part a
+{
+	color: black;
+	text-decoration: none;
+	outline: none;
+	padding:0px;
+	cursor:pointer;
+}
+.wm_folders_part a:hover span, .wm_folder_over a span
+{
+	/* color: #c74747; */
+	text-decoration: underline;
+}
+.wm_folders_part .wm_select_folder a:hover span
+{
+	cursor: default;
+	text-decoration: none;
+}
+.wm_select_folder a
+{
+	font-weight:bold;
+	color:#fff;
+}
+#layout_3pane .wm_select_folder a {
+	color: White;
+	font-weight:normal;
+}
+
+.wm_folders_hide_show
+{
+	width: 100%;
+	height: 20px;
+	text-align:right;
+	background-color: #F9F9F9;
+}
+
+.wm_folders_hide, .wm_folders_show
+{
+	background-image: url(mail.png);
+	background-repeat: no-repeat;
+	width: 21px;
+	height: 21px;
+	display:-moz-inline-box;
+	display:inline-block;
+	vertical-align:middle;
+}
+
+.wm_folders_hide
+{
+	background-position: -560px -80px;
+}
+
+.wm_folders_show
+{
+	background-position: -600px -80px;
+}
+
+.wm_manage_folders
+{
+	background-color: #f7f7f7;
+	height: 17px;
+	padding: 5px 0 0 4px;
+	text-align: center;
+	vertical-align: top;
+}
+
+.wm_manage_folders a, .wm_manage_folders a:hover
+{
+	font-size: 9px;
+	color: #5D5C5C;
+}
+
+.wm_folders_basic_view .wm_manage_folders
+{
+	padding: 0px;
+	text-align: center;
+	vertical-align: top;
+	background-color: #F7F7F7;
+	border: 1px solid #ccc;
+	border-width: 0px 1px;
+	height: 19px;
+	line-height:16px;
+}
+
+.wm_folders_basic_view .wm_manage_folders a, .wm_folders_basic_view .wm_manage_folders a:hover { color: #4477bb; }
+.wm_folders_top_corners {
+	height: 0px;
+}
+.wm_manage_folders_corner1,
+.wm_manage_folders_corner2,
+.wm_manage_folders_corner3 {
+	height: 1px;
+	overflow:hidden;
+	background-color: #F7F7F7;
+	border: 1px solid #ccc;
+	border-width: 0px 1px;
+	display:none;
+}
+.wm_manage_folders_corner1 {
+	background-color: #ccc;
+	margin: 0px 3px;
+}
+.wm_manage_folders_corner2 {
+	margin: 0px 2px;
+}
+.wm_manage_folders_corner3 {
+	margin: 0px 1px;
+}
+.wm_manage_folders_corner1.bottom,
+.wm_manage_folders_corner2.bottom,
+.wm_manage_folders_corner3.bottom {
+	display:block;
+}
+/*--folders part*/
+
+/*inbox part*/
+.wm_message_list_pane
+{
+	border-top: solid 3px #C9D8ED;
+	border-right: 0;
+	border-bottom: solid 3px #C9D8ED;
+	border-left: 0;
+}
+
+.wm_inbox
+{
+	border:solid #ccc;
+	border-width:0px 0px 1px 1px;
+}
+
+.wm_inbox a
+{
+	color: #FF8A00;
+	text-decoration: none;
+}
+
+.wm_inbox a:hover
+{
+	text-decoration: underline;
+}
+
+.wm_inbox td, .wm_inbox img, .wm_inbox input,
+.wm_contact_list_div td, .wm_contact_list_div img, .wm_contact_list_div input
+{
+	text-align: center;
+	vertical-align: middle;
+}
+
+.wm_inbox_headers
+{
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 24px;
+	background: #dfe2e3 url(gradients.png) repeat-x 0px -350px;
+	color: #555;
+	border: 0;
+	border-bottom: solid 1px #c3c3c3;
+}
+
+.wm_inbox_header, .wm_inbox_headers_separate, .wm_inbox_headers_separate_noresize
+{
+	position: absolute;
+	top: 0px;
+	text-align: center;
+	padding-top: 6px;
+}
+.wm_inbox_headers .wm_inbox_headers_checkbox
+{
+	padding-top: 4px;
+	$padding-top: 2px !important;
+}
+
+.wm_inbox_header
+{
+	height: 18px;
+}
+
+.wm_inbox_headers img
+{
+	width: 14px;
+	height: 14px;
+	vertical-align: middle;
+}
+
+.wm_inbox_headers_from_subject
+{
+	text-align: left !important;
+	padding-left: 4px;
+}
+
+.wm_inbox_headers_text
+{
+	padding-left: 4px;
+}
+
+.wm_inbox_headers_separate_noresize
+{
+	width: 1px;
+	padding: 0 !important;
+	background: #ccc;
+	overflow: hidden;
+	height: 100%;
+}
+
+.wm_inbox_headers_separate
+{
+	height: 24px;
+	padding: 0 !important;
+	overflow: hidden;
+}
+
+.wm_inbox_headers_separate div
+{
+	margin-left: 1px;
+	width: 1px;
+	height: 100%;
+	padding: 0 !important;
+	background: #ccc;
+	overflow: hidden;
+}
+
+.wm_inbox_lines
+{
+	width: 600px;
+	background: #f7f7f7;
+}
+.wm_message_list .wm_inbox_lines
+{
+	border: solid #ccc;
+	border-width: 0px 1px;
+	padding: 0 1px;
+}
+
+.wm_inbox_lines, .wm_contacts_in_group_lines
+{
+	overflow: auto;
+	overflow-x: hidden;
+	overflow-y: auto;
+	text-align: left;
+	outline: none;
+}
+
+.wm_contacts_in_group_lines
+{
+	width: 300px;
+	margin: 20px 20px 0 20px;
+	border: solid 1px #E5E5E5 !important;
+}
+
+.wm_contacts_in_group_actions
+{
+	width: 300px;
+	margin: 4px 20px 0 20px;
+}
+
+.wm_contacts_in_group_actions a
+{
+	font-size: 10px !important;
+}
+
+.wm_contacts_headers
+{
+	background: #e7e8eb url(gradients.png) repeat-x 0px -350px;
+	color: #393939;
+	$height: 20px;
+}
+
+.wm_contacts_headers td
+{
+	border: solid 1px #E5E5E5;
+	padding: 4px !important;
+	$padding: 0 4px !important;
+}
+
+.wm_contacts_in_group_lines td
+{
+	padding: 0 4px;
+}
+
+.wm_inbox_info_message
+{
+	font: normal 18px Tahoma;
+	color: #ccc;
+	text-align: center;
+	margin: 30px;
+}
+
+.wm_view_message_info
+{
+	font: normal 14px Tahoma;
+	margin-top: 10px;
+}
+
+.wm_inbox_lines table
+{
+	table-layout: fixed;
+	width: 554px;
+	padding: 0;
+	margin: 0;
+	background-color: White;
+}
+
+.wm_inbox_lines td
+{
+	font: normal 11px Tahoma;
+	overflow: hidden;
+	white-space: nowrap;
+	padding: 0;
+	margin: 0;
+}
+
+.wm_inbox_lines_flag, .wm_inbox_lines_unflag, .wm_inbox_lines_attachment,
+.wm_inbox_lines_priority_header, .wm_inbox_lines_priority_high, .wm_inbox_lines_priority_normal, .wm_inbox_lines_priority_low,
+.wm_inbox_lines_sensivity_header, .wm_inbox_lines_sensivity
+{
+	background-image: url(mail.png);
+	background-repeat: no-repeat;
+	width: 16px;
+	height: 14px;
+	margin-bottom: 1px;
+}
+
+.wm_inbox_lines_flag
+{
+	background-position: 0 -120px;
+}
+
+.wm_inbox_lines_unflag
+{
+	background-position: -40px -120px;
+}
+
+.wm_inbox_lines_attachment
+{
+	background-position: -200px -120px;
+}
+
+.wm_inbox_lines_priority_header
+{
+	background-position: -200px -200px;
+	height: 15px;
+	width: 19px;
+}
+
+.wm_inbox_lines_priority_high
+{
+	background-position: -120px -40px;
+}
+
+.wm_inbox_lines_priority_normal
+{
+	background-position: -160px -40px;
+}
+
+.wm_inbox_lines_priority_low
+{
+	background-position: -200px -40px;
+}
+
+.wm_inbox_lines_sensivity_header
+{
+	background-position: -120px -200px;
+}
+
+.wm_inbox_lines_sensivity
+{
+	background-position: -160px -200px;
+}
+
+.wm_inbox_lines_replied, .wm_inbox_lines_forwarded, .wm_inbox_lines_rpl_fwd
+{
+	background: url(mail.png) no-repeat 0px -200px;
+	height:10px;
+	width:10px;
+	margin:0px 4px 0px 0px;
+	display:-moz-inline-box;
+	display:inline-block;
+	vertical-align:bottom;
+}
+.wm_inbox_lines_forwarded
+{
+	background-position:-40px -200px;
+}
+.wm_inbox_lines_rpl_fwd
+{
+	background-position:-80px -200px;
+	width:22px;
+}
+
+.wm_inbox_lines_group
+{
+	background-image: url(mail.png);
+	background-repeat: no-repeat;
+	background-position: -400px -120px;
+	width: 16px;
+	height: 16px;
+	margin-bottom: 1px;
+	padding: 0;
+}
+
+span.wm_inbox_lines_group
+{
+	padding: 0 6px !important;
+	$padding: 0 8px !important;
+}
+
+.wm_inbox_lines_sort_asc, .wm_inbox_lines_sort_desc
+{
+	background-image: url(mail.png);
+	background-repeat: no-repeat;
+	padding: 0 5px;
+	$padding: 0 7px;
+}
+
+.wm_inbox_lines_sort_asc
+{
+	background-position: -280px -120px;
+}
+
+.wm_inbox_lines_sort_desc
+{
+	background-position: -240px -120px;
+}
+
+.wm_inbox_lines a
+{
+	color: black;
+}
+
+.wm_inbox_lines font
+{
+	background: #9dd3f2;
+	font-size: 110%
+}
+/*
+.wm_inbox_lines td nobr
+{
+	padding: 0px 2px;
+}
+
+.wm_inbox_item td,
+.wm_inbox_read_item td,
+.wm_inbox_deleted_item td, .wm_inbox_deleted_item_select td
+{
+	height: 20px;
+	border-bottom: solid 1px #e5e5e5 !important;
+	cursor: default;
+	color:#555;
+	vertical-align: middle !important;
+}
+.wm_inbox_item_select td, .wm_inbox_read_item_select td
+{
+	border-bottom: solid 1px #E5E5E5 !important;
+	vertical-align: middle !important;
+	height: 20px;
+}
+
+.wm_inbox_deleted_item td, .wm_inbox_deleted_item_select td
+{
+	text-decoration: line-through;
+	color: #bbb;
+}
+
+.wm_inbox_item
+{
+}
+
+.wm_inbox_item td, .wm_inbox_item_select td
+{
+	font-weight: bold;
+	color: #000000;
+	background:#fff;
+}
+.wm_inbox_item_select td
+{
+	font-weight: bold;
+	color: #000000;
+	background: #C1CDD8;
+}
+
+.wm_inbox_item .subject, .wm_inbox_read_item .subject
+{
+	color: Black;
+}
+.wm_inbox_read_item_select .subject, .wm_inbox_item_select .subject, .wm_inbox_deleted_item_select .subject
+{
+	color: White;
+}
+
+.wm_inbox_read_item_select, .wm_inbox_item_select, .wm_inbox_deleted_item_select
+{
+	background: #C1CDD8;
+	color: #222;
+	height: 20px;
+}
+
+.wm_inbox_deleted_item_select td
+{
+	color:#606060;
+}
+
+.wm_inbox_grey_item td
+{
+	color: #CCCCCC;
+}
+*/
+.wm_inbox_item td, .wm_inbox_read_item td, .wm_inbox_deleted_item td, 
+.wm_inbox_item_select td, .wm_inbox_read_item_select td, .wm_inbox_deleted_item_select td, 
+.wm_inbox_item_view td, .wm_inbox_read_item_view td, .wm_inbox_deleted_item_view td {
+	border-bottom: solid 1px #e5e5e5 !important;
+	color: #555555;
+	cursor: default;
+	height: 20px;
+	vertical-align: middle !important;
+}
+.wm_message_list .wm_inbox_item td, .wm_message_list .wm_inbox_read_item td, .wm_message_list .wm_inbox_deleted_item td, 
+.wm_message_list .wm_inbox_item_select td, .wm_message_list .wm_inbox_read_item_select td, .wm_message_list .wm_inbox_deleted_item_select td, 
+.wm_message_list .wm_inbox_item_view td, .wm_message_list .wm_inbox_read_item_view td, .wm_message_list .wm_inbox_deleted_item_view td {
+	height: 36px;
+}
+.wm_inbox_subject { color: Black; overflow:hidden; }	
+.wm_inbox_message_size,
+.wm_inbox_message_date {
+	color:#999;
+	float:right;
+	display:-moz-inline-box;
+	display: inline-block;
+}
+.wm_inbox_message_date {
+	margin:4px 10px;
+}
+.wm_inbox_message_size {
+	width:40px;
+	margin:4px 0px 0px;
+}
+/*deleted*/
+.wm_inbox_deleted_item td, .wm_inbox_deleted_item_select td, .wm_inbox_deleted_item_view td {
+	color: #bbbbbb;
+	text-decoration: line-through;
+}
+.wm_inbox_deleted_item .wm_inbox_subject, .wm_inbox_deleted_item_select .wm_inbox_subject {
+	color: #bbbbbb;
+}
+/*unread*/
+.wm_inbox_item td, .wm_inbox_item_select td, .wm_inbox_item_view td 
+{
+	font-weight: bold;
+}
+/*seleted*/
+.wm_inbox_read_item_select td, .wm_inbox_item_select td, .wm_inbox_deleted_item_select td {
+	background-color: #ebf7cb;
+}
+/*viewed*/
+.wm_inbox_read_item_view td, .wm_inbox_item_view td, .wm_inbox_deleted_item_view td {
+	background-color: #71B8DA;
+	color: White;
+}
+.wm_inbox_read_item_view .wm_inbox_subject,
+.wm_inbox_item_view .wm_inbox_subject,
+.wm_inbox_deleted_item_view .wm_inbox_subject,
+.wm_inbox_read_item_view span,
+.wm_inbox_item_view span,
+.wm_inbox_deleted_item_view span {
+	color: White;
+}
+
+.wm_inbox_grey_item td { color: #CCCCCC; }
+.wm_inbox_read_item_view_corner { width: 1px; }
+.wm_inbox_read_item_view_corner div
+{
+	border-top: solid 1px White;
+	border-bottom: solid 1px White;
+	height: 38px;
+	width: 1px;
+}
+/*--inbox part*/
+
+/*message part*/
+.wm_message_pane_corner1,
+.wm_message_pane_corner2,
+.wm_message_pane_corner3,
+.wm_message_pane_corner4,
+.wm_message_pane_corner5
+{
+	background-color: #71B8DA;
+	border: 0px;
+	height: 1px;
+	overflow:hidden;
+}
+.wm_message_pane_corner5 { display: none; }
+.wm_message_pane_corner1
+{
+	border: solid #EF4A4A;
+	border-width: 0px 2px;
+}
+.wm_message_pane_corner2
+{
+	border-left: solid #EF4A4A;
+	border-width: 0px 1px;
+}
+.wm_message_pane_corner4
+{
+	background-color: #e2e4e6;
+	border: solid 4px #71B8DA;
+	border-width: 0px 4px;
+}
+.wm_message_pane_corner1.bottom { border: 0px; margin: 0px 2px !important; }
+.wm_message_pane_corner2.bottom { border: 0px; margin: 0px 1px !important; }
+.wm_message_pane_corner3.bottom { border: 0px; margin: 0px !important; }
+.wm_message_pane_border
+{
+	background-color: #e2e4e6;
+	border: 0;
+	border: solid #71B8DA;
+	border-width:0px 3px;
+}
+.wm_message_body_quotation { color: Maroon; }
+.wm_message_container {
+	border:solid #ccc;
+	border-width: 1px 0px 1px 1px;
+}
+
+.wm_message_headers
+{
+	background: #f3f3f3;
+	border: 0px;
+	font: normal 11px Tahoma;
+	color: Black;
+}
+
+.wm_message_from
+{
+	font-size: 12px !important;
+	margin: 0px !important;
+}
+
+.wm_message_headers select /* charset selection in preview pane */
+{
+	font: normal 10px Tahoma;
+}
+
+.wm_message_headers div /* message headers' row */
+{
+	height: 18px;
+	padding: 4px 0;
+}
+
+.wm_message_headers a
+{
+	color: #4477BB;
+	font-size: 11px;
+	text-decoration: none;
+}
+
+.wm_message_headers a:hover
+{
+	color: #e60000;
+	text-decoration: underline;
+}
+
+.wm_message_headers font
+{
+	color: #265688;
+	font-size: 11px;
+	margin-right: 4px;
+}
+
+.wm_message_headers span
+{
+	white-space: nowrap;
+	margin: 0 4px 0 4px;
+}
+
+.wm_no_subject
+{
+	font-style: italic;
+	color: #999;
+}
+
+.wm_message_left
+{
+	display: block;
+	float: left;
+	text-align: left;
+}
+
+.wm_message_right
+{
+	display: block;
+	float: right;
+}
+
+.wm_message_resized
+{
+	overflow: hidden;
+}
+
+.wm_message_attachments
+{
+	margin: 0 2px 0 0;
+	width: 140px;
+	text-align: center;
+	overflow: auto;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background: White;
+	font: normal 11px Tahoma, Arial, Helvetica, sans-serif;
+}
+
+.wm_message_attachments div
+{
+	padding: 4px;
+	width: 95px;
+	height: 60px;
+	overflow: hidden;
+	vertical-align: middle;
+	margin-bottom: 8px;
+}
+
+.wm_message_attachments div div
+{
+	background-image: url(editor.png);
+	background-repeat: no-repeat;
+	width: 32px !important;
+	height: 32px !important;
+	margin-bottom: 0 !important;
+	margin: 0 30px;
+	padding: 0 !important;
+}
+
+.wm_message_attachments span
+{
+	cursor: hand;
+	cursor: pointer;
+}
+
+.wm_attach_download_a
+{
+	text-decoration: none;
+	color: Black;
+	padding: 0;
+	font-size: 11px;
+}
+
+.wm_attach_view_a
+{
+	color: #FF8A00;
+	padding: 0;
+	font-size: 11px;
+}
+
+.wm_message
+{
+	background: White;
+	text-align: left;
+	overflow: auto;
+	padding: 8px;
+	font: normal 12px Tahoma, Arial, Helvetica, sans-serif;
+}
+.wm_message_viewer_cell .wm_message, .wm_message_viewer_cell .wm_message_attachments
+{
+	border-top:1px solid #dadadf;
+	border-bottom:1px solid #dadadf;
+}
+
+.wm_message_body_rtl
+{
+	direction: rtl;
+}
+
+.wm_message_body_rtl, .wm_message_body_rtl td
+{
+	text-align: right !important;
+}
+
+.wm_message_body_ltr
+{
+	direction: ltr;
+}
+
+.wm_message_body_ltr, .wm_message_body_ltr td
+{
+	text-align: left !important;
+}
+
+.wm_attachments_cell
+{
+	border: 0;
+	padding: 2px 0 2px 5px !important;
+}
+
+.wm_message_cell
+{
+	border: 0;
+	padding: 2px 5px 2px 0 !important;
+}
+/*--message part*/
+
+/*html editor*/
+.wm_html_editor
+{
+	font: normal 13px Tahoma, Arial, Helvetica, sans-serif;
+	color: black;
+	text-indent: 0px;
+	border: 1px solid #ccc;
+	width: 685px;
+	height: 331px;
+	table-layout: fixed;
+	margin: 0;
+}
+
+.wm_html_editor_toolbar
+{
+	background: #dcdcde;
+	height: 30px;
+}
+
+.wm_html_editor_toolbar .wm_toolbar_item 
+{
+	border: solid 0px #7E7D7D;
+	background: transparent;
+}
+
+.wm_html_editor .wm_toolbar_item, .wm_html_editor .wm_toolbar_item_over
+{
+	margin-top: 2px;
+	margin-bottom: 2px; 
+	$margin-top: 3px;
+	float:left;
+	padding:5px 4px 3px;
+}
+
+.wm_html_editor .wm_toolbar_item div, .wm_html_editor .wm_toolbar_item_over div
+{
+	background-image: url(editor.png);
+	background-repeat: no-repeat;
+	width: 16px;
+	height: 16px;
+	margin: 0 0 4px;
+}
+
+.wm_html_editor_left_part
+{
+	padding: 2px;
+	width: 156px;
+}
+
+.wm_html_editor_center_part
+{
+	padding: 0;
+	width: 200px;
+}
+
+.wm_html_editor_select
+{
+	border: solid 1px #7E7D7D;
+}
+
+.wm_html_editor_right_part
+{
+	padding: 2px;
+	width: 321px;
+}
+
+.wm_html_editor span
+{
+	display: block;
+	margin: 1px;
+	cursor: pointer;
+	cursor: hand;
+	vertical-align: middle;
+}
+
+.wm_html_editor .wm_toolbar_item_over
+{
+	float: left;
+	background: #DCDCDE url(editor.png) no-repeat scroll -480px 0px;
+	color: #000000;
+	border: solid 0px #7cc0d6;
+}
+
+.wm_html_editor_cell
+{
+	padding: 0 !important;
+	background: White;
+}
+
+.wm_html_editor_switcher
+{
+	padding: 4px 25px 8px 4px !important;
+	text-align: right !important;
+}
+
+.wm_html_editor_switcher a
+{
+	/*color: #4477bb !important;*/
+	color: #9999AA !important;
+	text-decoration: underline !important;
+}
+
+.wm_html_editor_switcher a:hover
+{
+	text-decoration: underline !important;
+	/*color: #c74848 !important;*/
+	color: #555566 !important;
+}
+
+.wm_editor
+{
+	width: 684px;
+	height: 300px;
+	border: 0;
+	vertical-align: top;
+}
+
+.wm_plain_editor_container
+{
+	width: 684px;
+	height: 330px;
+	margin: 0;
+	padding: 0;
+}
+
+.wm_plain_editor_text
+{
+	width: 680px;
+	height: 328px;
+	border: 0;
+	border-left: solid 1px White;
+	margin: 0;
+	padding: 0;
+}
+/*--html editor*/
+
+/*new message*/
+.wm_new_message,
+.wm_new_message_attachments,
+.wm_new_message_attach
+{
+	background: #efefef;
+	width: 100%;
+	padding: 0 10px 0 10px;
+	color: Black;
+	font: normal 12px Tahoma, Arial, Helvetica, sans-serif;
+}
+
+.wm_new_message td
+{
+	padding: 2px 5px 2px 10px;
+	border: none;
+	text-align: left;
+}
+
+.wm_new_message_title
+{
+	text-align: right !important;
+	width: 90px;
+}
+
+.wm_attachment
+{
+	border-top: solid 1px #7E7D7D !important;
+	color: #000000;
+	vertical-align: middle;
+}
+
+.wm_attachment_image
+{
+	float: left;
+	background-image: url(editor.png);
+	background-repeat: no-repeat;
+	width: 32px;
+	height: 35px;
+	margin-right: 4px;
+}
+
+.wm_attachment
+{
+	line-height: 32px;
+}
+
+.wm_attach
+{
+	border-top: solid 1px #7E7D7D !important;
+	padding: 6px 5px 4px 10px !important;
+}
+
+.wm_new_message a
+{
+	color: black;
+	text-decoration: underline;
+}
+.wm_new_message nobr a
+{
+	color: #9999AA;
+	text-decoration: underline;
+}
+
+.wm_new_message nobr a:hover
+{
+	color: #556;
+	text-decoration: underline;
+}
+
+.wm_new_message a:hover
+{
+	color: #2b5877;
+	text-decoration: none;
+}
+
+.wm_image_uploader_cont
+{
+	width: 304px;
+	height: 68px;
+	position: absolute;
+	background: white;
+	border: 1px solid #7E7D7D;
+	padding: 10px;
+	font: normal 12px Tahoma;
+}
+
+.wm_image_uploader_cont td
+{
+	padding: 4px;
+}
+
+.wm_image_uploader_cont .wm_button
+{
+	margin: 2px;
+}
+
+.wm_auto_filling_cont
+{
+	border: solid 1px #7E7D7D;
+	border-top: 0;
+	font: normal 12px Tahoma;
+}
+
+.wm_auto_filling_cont div
+{
+	cursor: default;
+	background: White;
+	padding: 2px;
+}
+
+.wm_auto_filling_img_group
+{
+	width: 14px;
+	height: 14px;
+	margin-right: 4px;
+}
+
+.wm_auto_filling_chosen
+{
+	background: #cadbe5 !important;
+}
+
+.wm_popular_contacts_cont
+{
+	background: White;
+	border: solid 1px #7E7D7D;
+	font: normal 12px Tahoma;
+	padding-top: 16px;
+}
+
+.wm_popular_contacts_cont div
+{
+	cursor: default;
+	background: White;
+	padding: 4px;
+}
+
+.wm_popular_contacts_image
+{
+	background-image: url(mail.png) !important;
+	background-position: -480px -120px !important;
+	background-repeat: no-repeat !important;
+	height: 11px;
+	padding: 0 !important;
+	position: absolute;
+	right: 4px;
+	top: 4px;
+	width: 11px;
+}
+/*--new message*/
+
+/*view message*/
+.wm_safety_info
+{
+	color: #B5AD94;
+	background: #FFFFc5;
+	border: 1px solid #eae7ca;
+	border-left: 0px solid #000;
+	border-top: 1px solid #eae7ca;
+	font: normal 11px Tahoma;
+	padding: 8px !important;
+	text-align: left;
+}
+
+.wm_safety_info a
+{
+	color: #7E9BAF;
+}
+
+.wm_view_message, .wm_message_viewer
+{
+	background: #eCeCeC;
+	width: 100%;
+	color: Black;
+	font: normal 12px Tahoma, Arial, Helvetica, sans-serif;
+}
+
+.wm_view_message td, .wm_message_viewer_cell
+{
+	padding: 2px 5px 2px 5px;
+	text-align: left;
+}
+
+.wm_view_message_title
+{
+	text-align: right !important;
+	vertical-align: top;
+	width: 50px;
+	color: #5e5e5f;
+	white-space: nowrap;
+	padding: 2px 5px 2px 10px;
+}
+
+.wm_view_message font
+{
+	color: #5e5e5f;
+}
+
+.wm_view_message_select /* charset selection in full screen view */
+{
+	font: normal 11px Tahoma;
+}
+
+.wm_view_message_switcher
+{
+	vertical-align: bottom !important;
+	text-align: right !important;
+}
+
+.wm_view_message_switcher img
+{
+	margin-right: 6px;
+	cursor: pointer;
+	cursor: hand;
+	width: 13px;
+	height: 13px;
+}
+
+.wm_add_address_book_img
+{
+	background-image: url(mail.png);
+	background-repeat: no-repeat;
+	background-position: -440px -120px;
+	padding: 0 7px;
+	vertical-align: top;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.wm_view_message .wm_add_address_book_img
+{
+	margin-left: 4px;
+}
+
+.wm_headers_switcher
+{
+	text-align: right !important;
+	vertical-align: top;
+	padding-left: 0;
+}
+
+.wm_headers_switcher a
+{
+	color: #99a;
+	font-size: 10px;
+}
+
+.wm_headers_switcher a:hover
+{
+	color: #556;
+}
+
+.wm_headers
+{
+	border: 1px solid #ababb7;
+	border-top:1px solid #ccc;
+	border-left:1px solid #ccc;
+	background: #D7DDE0;
+	padding: 5px 5px 0 5px;
+	position: absolute;
+	z-index: 1;
+}
+
+.wm_message_rfc822
+{
+	background: White;
+	font: normal 12px Tahoma, Arial, Helvetica, sans-serif;
+	color: #000000;
+	border: 1px solid #ababb7;
+	border-bottom:1px solid #ccc;
+	border-right:1px solid #ccc;
+	padding: 2px 2px 2px 4px;
+	margin: 0;
+	overflow: auto;
+	text-align: left;
+}
+
+.wm_hide_headers
+{
+	text-align: right;
+	padding: 2px;
+}
+
+.wm_hide_headers a
+{
+	font: normal 14px Tahoma, Arial, Helvetica, sans-serif;
+}
+
+.wm_headers a
+{
+	color: #4477bb;
+	padding: 4px;
+	text-decoration: none;
+}
+
+.wm_headers a:hover
+{
+	color: #e60000;
+	text-decoration: underline;
+}
+
+.wm_importance_img
+{
+	background-image: url(mail.png);
+	background-repeat: no-repeat;
+	background-position: -120px -40px;
+	padding: 0 7px;
+}
+/*--view message*/
+
+/*contacts*/
+.wm_contacts
+{
+	width: 100%;
+	font: normal 11px Tahoma, Arial, Helvetica, sans-serif;
+	background: #fbfbfb;
+}
+
+.wm_contacts_list
+{
+	width: 40%;
+	float: left;
+	overflow: hidden;
+	vertical-align: top;
+}
+
+.wm_contact_list_div
+{
+	overflow: hidden;
+	border: solid #ccc;
+	border-width: 0px 1px 1px 0px;
+	background: White;
+}
+
+.wm_contacts_view_edit
+{
+	width: 60%;
+	float: left;
+	vertical-align: top;
+	text-align: left;
+}
+
+.wm_contacts_letter_search font
+{
+	margin-left: 5px;
+	background: none;
+	font: bold 14px Tahoma, Arial, Helvetica, sans-serif;
+	text-decoration: underline;
+}
+
+.wm_contacts_letter_search span
+{
+	margin-left: 5px;
+	font: normal 14px Tahoma, Arial, Helvetica, sans-serif;
+	color: #000000;
+}
+
+.wm_contacts_letter_search a
+{
+	color: #FF8A00;
+	font-size: 14px !important;
+	text-align: left;
+	margin-left: 5px;
+	text-decoration: none;
+}
+
+.wm_contacts_letter_search a:hover
+{
+	color: #404447;
+	text-decoration: underline;
+}
+
+.wm_contacts_view_edit a
+{
+	color: #4477BB;
+	font-size: 12px;
+	text-align: left;
+	text-decoration: none;
+}
+
+.wm_contacts_view_edit a:hover
+{
+	color: #e60000;
+	text-decoration: underline;
+}
+
+.wm_contacts_card_line1, .wm_contacts_card_line2, .wm_contacts_card_line3, 
+.wm_contacts_card_line4, .wm_contacts_card_line5
+{
+	padding: 0px;
+	height: 1px;
+	overflow:hidden;
+	background: #71B8DA;
+}
+.wm_contacts_card_line1 { margin: 0 2px; }
+.wm_contacts_card_line2 { margin: 0 1px; }
+.wm_contacts_card_line3 { margin: 0px; }
+.wm_contacts_card_line4 {
+	
+	margin: 0px;
+	border:1px solid #71B8DA;
+	border-width: 0px 4px;
+	background: #FFF;
+}
+
+.wm_contacts_card_line5 { display:none; }
+
+.wm_contacts_card_content
+{
+	padding: 20px 0px;
+	margin: 0px;
+	border:solid #71B8DA;
+	border-width:0px 3px;
+	background: #FFF;
+}
+
+.wm_contacts_view
+{
+	font-size: 11px;
+	text-align: left;
+	margin: 20px 20px 0 20px;
+	vertical-align: middle;
+}
+
+.wm_contacts_tab_view
+{
+	margin: 0px 20px 20px 20px;
+}
+
+.wm_contacts_view img
+{
+	vertical-align: text-bottom;
+}
+
+.wm_contacts_view td
+{	
+	background:none;
+	padding: 3px;
+	vertical-align:middle;
+}
+
+.wm_contacts_view select
+{
+	font: normal 11px Tahoma, Arial, Helvetica, sans-serif;
+}
+
+.wm_contacts_view .wm_hide_section
+{
+	text-align: right;
+	border-bottom: solid 1px #8D8C89;
+}
+.wm_contacts_section_name
+{
+	color:#636C78;
+}
+
+.wm_contacts_name
+{
+	font-size: 16px;
+	font-weight: bold;
+	height:30px;
+}
+
+.wm_contacts_name a
+{
+	font-weight: normal !important;
+}
+
+.wm_contacts_mail_button
+{
+	font-size: 18px;
+	margin: 20px 50px 0 20px;
+	padding: 4px 11px;
+	cursor: pointer;
+}
+
+.wm_contacts_section_name
+{
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.wm_contacts_email a, .wm_contacts_email a:hover
+{
+	font-size: 15px !important;
+	font-weight: bold;
+}
+
+.wm_contacts_groups a, .wm_contacts_groups a:hover
+{
+	font-size: 14px !important;
+}
+
+.wm_contacts_view_title
+{
+	text-align: right !important;
+	width: 100px;
+}
+
+.wm_group_name_input
+{
+	width: 240px;
+}
+
+.wm_add_contacts
+{
+	width: 300px;
+}
+
+.wm_add_contacts_area
+{
+	width: 100%;
+	height: 70px;
+	border: 1px solid #7E7D7D;
+	text-indent: 1px;
+}
+
+.wm_contacts_save_button
+{
+	text-align: right;
+	border-top: solid 1px #8D8C89;
+}
+
+.wm_contacts_tab
+{
+	background:#e9edf1 url(gradients.png) repeat-x 0px -120px;
+	font-weight: bold;
+	cursor: hand;
+	cursor: pointer;
+	width: 94%;
+	margin: 0 15px 2px 15px;
+	vertical-align: middle;
+	border-bottom: 0px solid #ccc;
+}
+
+.wm_contacts_tab span
+{
+	
+}
+
+.wm_contacts_tab td 
+{
+	background:url(gradients.png) no-repeat scroll right -90px;
+	padding-right: 6px;
+}
+
+.wm_contacts_tab_name
+{
+	background:url(gradients.png) no-repeat scroll 0px -60px;
+	color:#535C68;
+	font-family:"Lucida Grande","Lucida Sans Unicode",Arial,Verdana,sans-serif;
+	font-size: 12px;
+	line-height:25px;
+	vertical-align:middle;
+	float: left;
+	padding:0px 10px;
+	margin:0px;
+	display: block;
+	height:27px;
+}
+
+.wm_contacts_tab_open_mode, .wm_contacts_tab_close_mode,
+.wm_view_message_open_mode, .wm_view_message_close_mode
+{
+	float: right;
+	background-image: url(mail.png);
+	background-repeat: no-repeat;
+	width: 20px;
+	margin-top:4px;
+	height: 16px;	
+}
+
+.wm_view_message_open_mode, .wm_view_message_close_mode
+{
+	padding:0px;	
+}
+
+.wm_contacts_tab_open_mode, .wm_view_message_open_mode
+{
+	background-position: -680px -120px;
+}
+
+.wm_contacts_tab_close_mode, .wm_view_message_close_mode
+{
+	background-position: -720px -120px;
+}
+/*--contacts*/
+
+/*settings*/
+.clear {
+	clear: both;
+	height:0px;
+}
+.wm_settings
+{
+	border-top:1px solid #ccc;
+	width: 100%;
+	background:#f9f9f9;
+	/*width:400px;*/
+	text-align:left;
+}
+.wm_settings_row {
+	display:block !important;
+	background:#fff;
+	border: 1px solid #ddd;
+	border-top: 0px;
+	color:#000000;
+	margin-left:180px;
+	position:relative;
+	width:740px;
+}
+.wm_settings_signature
+{
+	margin: 15px 8px;
+}
+
+.wm_settings_signature .wm_input
+{
+	width: 603px;
+}
+
+.wm_settings_signature textarea.wm_input
+{
+	height: 280px;
+}
+
+.wm_settings_nav
+{
+	font: normal 12px Tahoma;
+	vertical-align: top;
+	padding: 10px 0 10px 10px;
+	z-index:2;
+	display:block !important;
+	float:left;
+	left:0;
+	margin-left:-920px;
+	position:relative;
+	width:169px;
+}
+
+.wm_settings_nav a
+{
+	color: #000000;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.wm_settings_nav a:hover
+{
+	color: #265688;
+	text-decoration: underline;
+}
+
+.wm_selected_settings_item span, .wm_settings_item span
+{
+	background-color:transparent;
+	background-image: url(mail.png);
+	background-repeat: no-repeat;
+	display:-moz-inline-box;display: inline-block;
+	vertical-align:middle;
+	width: 24px;
+	height: 21px;
+	padding:0px;
+	margin:0px;
+}
+
+.wm_selected_settings_item a, .wm_settings_item a
+{
+	margin:0px 0px 0px 10px ;
+	white-space: nowrap;
+}
+
+.wm_settings_item, .wm_selected_settings_item
+{
+	padding: 7px 9px 7px 5px;
+	position: relative;
+	white-space: nowrap;
+	left: 1px;
+}
+
+.wm_selected_settings_item
+{
+	background: White;
+	border:1px solid #DDDDDD;
+	border-right: 0px;
+	padding: 6px 8px 6px 4px;
+}
+
+.wm_settings_cont
+{
+	background: White;
+	font: normal 12px Tahoma, Arial, Helvetica, sans-serif;
+	text-align: left;
+	
+	width:740px;
+	display:block !important;
+	overflow:hidden;
+	float:left;
+	position:relative;
+}
+
+.wm_settings_cont a
+{
+	/*color: #4477BB;*/
+	color: #9999AA;
+	text-align: left;
+	text-decoration: none;
+}
+
+.wm_settings_cont a:hover
+{
+	/*color: #C74848;*/
+	color: #555566;
+	text-decoration: underline;
+}
+
+.wm_settings_cont td
+{
+	padding: 4px;
+}
+
+/*-------------*/
+.wm_settings_accounts_info, .wm_settings_part_info
+{
+	height: 26px;
+	font-weight: bold;
+}
+
+.wm_settings_accounts_info
+{
+	border-bottom: solid 1px #8D8C89;
+	margin: 30px 30px 0 30px;
+	width: 690px;
+}
+
+.wm_settings_part_info
+{
+	border-bottom: 1px solid #C4C7DB;
+	margin: 15px 8px 0;
+	width: 674px;
+}
+
+.wm_settings_switcher_info
+{
+	float: left;
+	height: 18px;
+	padding: 4px 4px 0 4px;
+}
+
+.wm_settings_pass_frame
+{
+	border: solid 1px #f5f5f5;
+	padding: 10px;
+}
+
+.wm_settings_switcher_item
+{
+	float: right;
+	height: 18px;
+	border: solid 1px #ccc;
+	border-width: 1px 0 0 1px;
+	margin-top: 3px;
+	background: #f5f5f5;
+	padding: 4px 4px 0 4px;
+}
+
+.wm_settings_switcher_select_item
+{
+	position: relative;
+	top: 1px;
+	background: #E5E5E5;
+	float: right;
+	height: 21px;
+	border: solid 1px #8D8C89;
+	border-bottom: 0;
+	padding: 4px 4px 0 4px;
+}
+
+.wm_settings_switcher_indent
+{
+	float: right;
+	margin-top: 3px;
+	width: 10px;
+	height: 23px;
+	border-left: solid 1px #8D8C89;
+}
+/*-------------*/
+.wm_settings_manage_folders
+{
+	background: white;
+	margin: 8px;
+	table-layout: fixed;
+	font-size: 12px;
+}
+
+.wm_settings_manage_folders td
+{
+	padding: 2px;
+	text-align: center;
+	border-bottom: solid 1px #C7C7C7;
+}
+
+.wm_settings_manage_folders a
+{
+	color: black;
+}
+
+.wm_settings_manage_folders select
+{
+	width: 140px;
+}
+
+.wm_settings_mf_headers, .wm_settings_mf_total
+{
+	background:White url(gradients.png) repeat scroll 0 -410px;
+	border-bottom:1px solid #CCCCCC;
+	height:26px;
+}
+
+.wm_settings_mf_folder
+{
+	text-align: left !important;
+}
+
+.wm_settings_mf_folder .wm_folder, .wm_settings_mf_folder .wm_folder_name {
+	margin-left:0px;
+	left:0px;
+}
+
+.wm_settings_manage_folders_folder img
+{
+	width: 15px;
+	height: 12px;
+}
+
+.wm_settings_mf_show, .wm_settings_mf_hide
+{
+	background-image: url(mail.png);
+	background-repeat: no-repeat;
+	padding: 0 6px;
+}
+
+.wm_settings_mf_show
+{
+	background-position: -600px -120px;
+}
+
+.wm_settings_mf_hide
+{
+	background-position: -640px -120px;
+}
+
+.wm_settings_mf_up_down
+{
+	white-space: nowrap;
+}
+
+.wm_settings_mf_up, .wm_settings_mf_up_inactive, .wm_settings_mf_down, .wm_settings_mf_down_inactive
+{
+	background-image: url(mail.png);
+	background-repeat: no-repeat;
+	padding: 0 6px;
+}
+
+.wm_settings_mf_up
+{
+	background-position: -720px -80px;
+}
+
+.wm_settings_mf_up_inactive
+{
+	background-position: -760px -80px;
+}
+
+.wm_settings_mf_down
+{
+	background-position: -640px -80px;
+}
+
+.wm_settings_mf_down_inactive
+{
+	background-position: -680px -80px;}
+
+.wm_settings_mf_total td
+{
+	border-bottom: 0 !important;
+	font-weight:bold;
+}
+
+.wm_settings_mf_page_switcher
+{
+	text-align: right !important;
+}
+
+.wm_settings_mf_page_switcher a, .wm_settings_mf_page_switcher span
+{
+	padding: 2px;
+}
+
+.wm_settings_new_folder
+{
+	margin: 0 30px 0 30px;
+}
+
+.wm_settings_new_folder select
+{
+	width: 200px;
+}
+
+.wm_settings_new_folder .wm_input
+{
+	width: 195px;
+}
+
+.wm_settings_on_mailserver
+{
+	vertical-align: bottom;
+	padding-left: 30px;
+}
+/*-------------*/
+
+.wm_toolbar_separate
+{
+	width: 20px;
+	height: 1px;
+	overflow: hidden;
+}
+
+.wm_settings_title
+{
+	text-align: right;
+}
+
+.wm_settings_common
+{
+	margin: 30px 30px 0 30px;
+	width: 690px;
+}
+
+.wm_settings_header
+{
+	font-weight: bold;
+}
+
+.wm_settings_help
+{
+	cursor: pointer;
+	cursor: hand;
+	width: 16px;
+	height: 16px;
+	margin: 0 0 3px 4px;
+	vertical-align: bottom;
+}
+
+.wm_settings_list
+{
+	background: #fafafa;
+	margin: 30px 30px 0 30px;
+	width: 690px;
+	border-right: solid 1px #ccc;
+	border-left: solid 1px #ccc;
+}
+
+.wm_email_settings_edit_zone_cell .wm_settings_list
+{
+	margin: 15px 8px;
+	width: 674px;
+}
+
+.wm_settings_list table
+{
+	width: 100%;
+}
+
+.wm_settings_list_select
+{
+	background: #C1CDD8;
+}
+
+.wm_settings_list td
+{
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	color:#555;
+}
+
+.wm_settings_list_select td
+{
+	border-bottom: 1px solid #ccc;
+	color:#000;
+}
+
+.wm_email_settings_edit_zone
+{
+	background: #E5E5E5;
+	margin: 0 30px 30px;
+	width: 690px;
+}
+
+.wm_email_settings_edit_zone_cell
+{
+	padding: 0 !important;
+}
+
+.wm_settings_properties
+{
+	margin: 15px 8px;
+	line-height: 22px;
+}
+
+.wm_settings_properties select
+{
+	vertical-align: middle;
+}
+
+.wm_secondary_info
+{
+	color: #999;
+	font-size: 11px;
+}
+
+span.wm_secondary_info
+{
+	color: #5D5C5C;
+}
+
+label.wm_secondary_info
+{
+	cursor: text;
+}
+
+table.wm_secondary_info
+{
+	margin: 0 8px;
+	width: 674px;
+}
+
+td.wm_secondary_info
+{
+	text-align: left !important;
+	vertical-align: top;
+}
+
+label.wm_nextline_info
+{
+	margin-left: 16px;
+	$margin-left: 24px;
+}
+
+label.wm_inline_info
+{
+	margin-left: 6px;
+}
+
+.wm_settings_add_account_button
+{
+	width: 690px;
+}
+
+.wm_settings_add_account_button
+{
+	margin: 15px 30px 0 30px;
+}
+
+.wm_settings_buttons
+{
+	border-top: solid 1px #C4C7DB;
+	margin: 15px 30px;
+	width: 690px;
+}
+
+.wm_email_settings_edit_zone .wm_settings_buttons
+{
+	margin: 0 8px 15px;
+	width: 674px;
+}
+
+.wm_settings_buttons td, .wm_settings_add_account_button td
+{
+	text-align: right;
+}
+
+.wm_delete_button
+{
+	text-align: left !important;
+}
+
+.wm_settings_input
+{
+	width: 99.8%;
+	$width: 99%;
+}
+
+.wm_port_input
+{
+	width: 40px;
+	margin-left: 6px;
+}
+
+.wm_settings_para
+{
+	margin-left: 15px;
+}
+
+.wm_settings_edit_filter
+{
+	margin: 15px 8px;
+}
+
+.wm_settings_edit_filter select
+{
+	width: 200px;
+}
+
+.wm_edit_filter_input
+{
+	width: 195px;
+}
+
+.wm_settings_filters
+{
+	margin: 30px 30px 30px 30px;
+}
+/*--settings*/
+
+.wm_additional_bar
+{
+	background: #eeeef8 url(gradients.png) repeat-x 0px -2240px;
+	border-top: 0;
+	border-right: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-bottom: 1px solid #D5D5D5;
+	color: #556;
+	font: normal 11px/normal Tahoma, Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+.wm_additional_bar_container {
+	text-align:left;
+}
+.wm_additional_bar_corner1,
+.wm_additional_bar_corner2,
+.wm_additional_bar_corner3 {
+	display:none;
+}
+.wm_list_checkbox_container
+{
+	display:-moz-inline-box;
+	display:inline-block;
+	vertical-align:top;
+	height:20px;
+	text-align: left;
+}
+.wm_list_checkbox_container input
+{
+	margin: 7px 9px 0px;
+	$margin: 5px 6px 0px;
+}
+.wm_arranged_by_title
+{
+	display:-moz-inline-box;
+	display:inline-block;
+	vertical-align:top;
+	height:20px;
+	padding:6px 4px 2px;
+}
+/* page switcher bar */
+.wm_page_switcher_bar
+{
+	border: 0px;
+	height: 39px;
+}
+.wm_page_switcher_container {
+	height: 35px;
+}
+.wm_page_switcher_container
+{
+	background: #eaeaea;
+	border: 1px solid #ccc;
+	border-bottom: 0px;
+}
+.wm_page_switcher_corner1,
+.wm_page_switcher_corner2,
+.wm_page_switcher_corner3
+{
+	background: #eaeaea;
+	border: solid #ccc;
+	border-width:0px 1px;
+	height: 1px;
+	overflow:hidden;
+	background-position: 0px -2199px;
+	margin: 0 3px;
+}
+.wm_page_switcher_corner1 {
+	background: #ccc;
+}
+.wm_page_switcher_corner2
+{
+	margin: 0 2px;
+}
+.wm_page_switcher_corner3
+{
+	margin: 0 1px;
+}
+/*-- page switcher bar --*/
+
+/*lowtoolbar*/
+.wm_lowtoolbar
+{
+	border-top: none;
+	height: 20px;
+	color: #556;
+	font: normal 11px Tahoma, Arial, Helvetica, sans-serif;
+	/* background: #E7E7EA;
+	border-top:1px solid #D5D5D5; */
+	line-height:normal;
+	margin-top:0px;
+	padding-top:0px;
+}
+.wm_message_viewer .wm_lowtoolbar
+{
+	border-top:0px solid #D5D5D5;
+}
+
+.wm_lowtoolbar_messages, .wm_lowtoolbar_space_info
+{
+	display: block;
+	font: normal 11px Tahoma, Arial, Helvetica, sans-serif;
+	padding-left: 4px;
+}
+
+.wm_lowtoolbar_messages
+{
+	float: left;
+	padding: 4px 4px 0 4px;
+	line-height: normal;
+}
+
+.wm_lowtoolbar_space_info
+{
+	float: right;
+	padding: 8px;
+}
+
+.wm_lowtoolbar_space_info .wm_progressbar
+{
+	background: #f1f2f3 ;
+	border: solid 1px #7F9DB9;
+}
+
+.wm_lowtoolbar_space_info .wm_progressbar_used
+{
+	background: #668eb8 url() repeat-x center;
+	border-right:1px solid #42a237;
+}
+
+.wm_lowtoolbar_space_info .wm_progressbar_all_used
+{
+	background: #a6caf0;
+	
+}
+
+.wm_lowtoolbar_plain_html
+{
+	display: block;
+	float: left;
+	padding: 4px 4px 6px 6px;
+	font: normal 13px Tahoma, Arial, Helvetica, sans-serif;
+}
+
+.wm_lowtoolbar_plain_html a
+{
+	color: #4477bb;
+	text-decoration: none;
+}
+.wm_lowtoolbar_plain_html a:hover
+{
+	color: #e60000;
+	text-decoration: underline;
+}
+/*--lowtoolbar*/
+
+/*progressbar*/
+.wm_progressbar
+{
+	overflow: hidden;
+	width: 100px;
+	height: 3px;
+	padding: 2px;
+	border: solid 1px #d4d4d4;
+	background: #F1F2F3;
+}
+
+.wm_progressbar_used, .wm_progressbar_all_used
+{
+	overflow: hidden;
+	display: block;
+	float: left;
+	background: #75BA5A url() repeat-x scroll center;
+	height: 3px;
+}
+/*--progressbar*/
+
+/*copyright*/
+.wm_copyright, .wm_copyright a, .wm_regular, .wm_regular a
+{
+	color: #939Cb3;
+	font: normal 11px Tahoma, Arial, Helvetica, sans-serif;
+	border: none;
+}
+.wm_copyright a
+{
+	color: #7DaAC3;
+}
+.wm_copyright a:hover
+{
+	color: #e60000;
+}
+
+.wm_regular, .wm_regular a
+{
+	color: White;
+}
+
+.wm_copyright
+{
+	height: 40px;
+	margin-top: 0px;
+	text-align: center;
+	position:absolute;
+	clear:both;
+	bottom:0px;
+	width:100%;
+}
+/*--copyright*/
+
+/*color palette*/
+.wm_color_palette
+{
+	position: absolute;
+	width: 286px;
+	height: 152px;
+	border: solid 1px #8D8C89;
+	background: #F1EEE7;
+}
+
+.wm_color_palette table
+{
+	margin: 4px;
+}
+
+.wm_color_palette td
+{
+	border: solid 1px #F1EEE7;
+}
+
+.wm_current_color_td
+{
+	text-align: center;
+	vertical-align: middle;
+	width: 20px;
+}
+
+.wm_current_color
+{
+	width: 20px;
+	height: 20px;
+	border: solid 1px #CCCCCC;
+}
+
+.wm_palette_color
+{
+	width: 11px;
+	height: 11px;
+	cursor: hand;
+	cursor: pointer;
+}
+/*--color palette*/
+
+.wm_drag_handle
+{
+	position: absolute;
+	font: normal 11px Tahoma, Arial, Helvetica, sans-serif;
+}
+
+.wm_drag_handle, .wm_drag_handle span
+{
+	vertical-align: middle;
+}
+
+.wm_drag_handle_img, .wm_not_drag_handle_img
+{
+	background-image: url(mail.png);
+	background-repeat: no-repeat;
+	width: 22px;
+	height: 16px;
+	float: left;
+}
+
+.wm_drag_handle_img
+{
+	background-position: -360px -120px;
+}
+
+.wm_not_drag_handle_img
+{
+	background-position: -320px -120px;
+}
+
+/*spellchecker*/
+.spell_popup_show 
+{ 
+	float: left; 
+	background-color: #DBEAF5;  
+	border: 1px #5B86A8 solid; 
+	position: absolute; 
+	z-index: 1; 
+	width: 180px;
+	font: normal 12px Tahoma, Arial, Helvetica, sans-serif;
+	cursor: default;
+}
+.spell_popup_hide 
+{ 
+	display: none; 
+}
+.spell_spanDeactive 
+{
+	color: black;
+	padding: 5px 5px 5px 5px;
+	background-color: #DBEAF5; 
+}
+.spell_spanActive
+{ 
+	color: black; 
+	padding: 5px 5px 5px 5px;
+	background-color: #F8FCFF; 
+}
+.spell_backLayer
+{
+	float: left; 
+	position: absolute; 
+	display: none;
+	z-index: 1;
+}
+/*--spellchecker*/
+
+.wm_button_link span, .wm_reply_button span
+{
+	color: #FFFFFF;
+	display: block;
+	font: bold 12px Verdana, sans-serif;
+	line-height: 22px;
+	text-align: center;
+	background:url(button-link-right.png) no-repeat right top;
+	height: 26px;
+	padding: 4px 10px;
+	display:-moz-inline-box;
+	display:inline-block;
+	white-space:nowrap;
+}
+.wm_button_link, .wm_reply_button
+{
+	background: #58BF4F url(button-link.png) no-repeat left top;
+	display:-moz-inline-box;
+	display:inline-block;
+	margin:0px 20px 10px;
+}
+.wm_reply_button span
+{
+	background: url(reply-button.png) no-repeat left top;
+	padding: 4px 16px;
+	position: relative;
+	right: 2px;
+}
+.wm_reply_button
+{
+	background: url(reply-button.png) no-repeat right top;
+	margin: 0 0 10px 10px;
+}
+.wm_button_link:hover {background-position: left bottom;}
+.wm_button_link span:hover {background-position: right bottom;}
+.wm_reply_button:hover {background-position: right -40px;}
+.wm_reply_button span:hover {background-position: left -40px;}
+
+.wm_reply_pane
+{
+	background: #EAEAEA;
+	border-top: solid 1px #c3c3c3;
+}
+
+.wm_reply_text
+{
+	border: 1px solid #c7c7c7;
+	-moz-border-radius : 2px;
+	-webkit-border-radius : 2px;
+	font-family: Tahoma;
+	font-size: 12px;
+	margin: 10px;
+	overflow: auto;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.wm_focused_text
+{
+	font-style: normal;
+	color: Black;
+}
+
+.wm_blured_text
+{
+	font-style: italic;
+	color: #BBBBBB;
+}
+
+.wm_reply_full_view_link
+{
+	color: #4477BB;
+	font-size: 11px;
+	margin-right: 10px;
+}
+
+.wm_contact_card 
+{
+	position: absolute;
+	width: auto;
+	height: auto;
+	border: solid 4px #92b9d5;
+	font: normal 11px Tahoma;
+	background: #eee url() repeat-x bottom;
+}
+
+.wm_contact_card td
+{
+	padding: 8px;
+	border-bottom:1px solid #ddd
+}
+td.wm_view_sections
+{
+	border-bottom: solid 4px #92b9d5;
+}
+.wm_contact_card .wm_view_sections
+{
+	padding: 8px 4px 8px 4px !important;
+	background: #fffdf9 url() repeat-x bottom;
+}
+
+.wm_contact_card table td
+{
+	padding: 0 4px;
+	text-align: left;
+}
+
+.wm_view_sections td
+{
+	border-bottom:0px solid #ddd;
+}
+
+.wm_contact_card a
+{
+	color: #4477BB;
+	text-decoration:none;
+}
+.wm_contact_card a:hover
+{
+	color: #e60000;
+	text-decoration:underline;
+}
+
+.wm_contact_card .wm_section_name
+{
+	font-weight: bold;
+	padding-top: 4px;
+}
+
+.wm_contact_card .wm_line_title
+{
+	text-align: right !important;
+}
+
+.wm_tr_message {
+	z-index: 100;
+	position: absolute;
+	background: #FFFFB5;
+	border: 1px solid #B5AD94;
+	padding: 7px 20px 7px 20px;
+	font: normal 12px Tahoma;
+	text-align: left;
+	vertical-align: middle;
+	color: #000000;
+	top: 0;
+}
+
+/* login lang switcher */
+.wm_login_lang_switcher {
+	background-image:url(mail.png);
+	background-position:-520px -80px;
+	background-repeat:no-repeat;
+	cursor:pointer;
+	display:-moz-inline-box;
+	display:inline-block;
+	height:14px;
+	width:10px;
+}
+.wm_language_place {
+	position:absolute;
+	top:5px;
+	right:10px;
+	text-align:right;
+}
+
+.wm_language_place div {
+	display:none;
+	background-color:white;
+	margin:2px 0px;
+	border:1px solid #ACB0B3;
+	z-index: 1001;
+}
+
+.wm_language_place #langs_selected {
+	color:#555;
+	text-decoration:none;
+}
+.wm_language_place #langs_selected:hover {
+	color:#D71717;
+	text-decoration:none;
+}
+
+.wm_language_place #langs_selected span{
+	text-decoration:underline !important;
+}
+
+.wm_language_place #langs_selected .wm_login_lang_switcher {
+	text-decoration:none !important;
+}
+
+.wm_language_place div a {
+	display:block;
+	padding:2px 5px;
+	font-size:12px;
+	font-weight:normal;
+	text-decoration:none;
+	color:black;
+	background-color:white;
+	white-space:nowrap;
+}
+.wm_language_place div a:hover {
+	background-color:silver;
+}
+
+.wm_mapping_head {
+	float: right;
+	margin-top: -14px;
+	text-align:center;
+	width: 100px;
+	position: relative;
+}
+.wm_mapping_line {
+	float: right;
+	margin-top: -20px;
+	position: relative;
+}
+
+.wm_mapping_line select {
+	width: 100px;
+	font-size: 10px;
+}
+/* dropdown To/CC/BCC */
+.wm_addressfield_dropdown {
+	border: solid #9BAEBF;
+	border-width:1px 1px 0px;
+	background: white;
+}
+.wm_addressfield_dropdown a {
+	padding: 3px 0px;
+	text-indent:3px;
+	cursor: pointer;
+	font: 12px Tahoma, Arial, Helvetica, sans-serif;
+	color: #555;
+	display:block;
+	width:100%;
+	border-bottom:1px solid #9BAEBF;
+	text-decoration:none;
+}
+.wm_addressfield_dropdown a:hover {
+	background:#C1CDD8;
+	color: white;
+	text-decoration:none;
+}
+/* filters choicer */
+.wm_filters_cont
+{
+	margin: 8px;
+	color: #696969;
+}
+
+.wm_filters_cont a,
+.wm_filters_cont a:hover,
+.wm_filters_cont a:visited,
+.wm_filters_add_link
+{
+	color: #10659E !important;
+}
+
+.wm_filters_line
+{
+	padding: 4px;
+}
+
+a.wm_choices_menu_link,
+a.wm_choices_menu_link:hover,
+a.wm_choices_menu_link:visited
+{
+	border-bottom: 1px dashed;
+	text-decoration: none;
+}
+
+div.wm_choices_popup {
+    padding: 3px 5px;
+    border: 2px solid #006699;
+    background-color: #fcfcfc;
+    position: absolute;
+    width: auto;
+    font: normal 11px Tahoma, Arial, Helvetica, sans-serif;
+}
+
+div.wm_choices_popup div
+{
+    height: 16px;
+}
+
+.wm_active_choice
+{
+    cursor: pointer;
+	text-decoration: none;
+	display: inline;
+	color: #000000 !important;
+	font-weight: bold;
+}
+
+a.wm_choice
+{
+    display: inline;/*to prevent .text a  95 */
+    color: #10659E !important;
+    text-decoration: none;
+}
+/*- filters choicer -*/
+
+/* attachmets uploading */
+.wm_flash_attachment_uploading 
+{
+	text-align: left;
+	padding: 10px;
+	background: #EFEFEF;
+}
+
+div.fieldset {
+	font: normal 12px Tahoma,Arial,Helvetica,sans-serif;
+}
+
+div.flash {
+	background-color: #F0F5FF;
+	border: 1px solid #CEE2F2;
+	width: 397px;
+
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.progressWrapper {
+	width: 397px;
+	overflow: hidden;
+}
+
+.progressContainer {
+	padding: 8px;
+	overflow: hidden;
+}
+
+.message {
+	margin: 1em 0;
+	padding: 10px 20px;
+	border: solid 1px #FFDD99;
+	background-color: #FFFFCC;
+	overflow: hidden;
+}
+
+.error {
+	background-color: #FFEBEB;
+}
+
+.complete {
+	background-color: #EBFFEB;
+}
+
+.current {
+	background-color: #FFFFC5;
+}
+
+.progressName {
+	width: 323px;
+	height: 20px;
+	text-align: left;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.progressBarInProgress,
+.progressBarComplete,
+.progressBarError {
+	font-size: 0;
+	width: 0%;
+	height: 2px;
+	background-color: blue;
+	margin-top: 2px;
+}
+
+.progressBarComplete {
+	width: 100%;
+	background-color: green;
+	visibility: hidden;
+}
+
+.progressBarError {
+	width: 100%;
+	background-color: red;
+	visibility: hidden;
+}
+
+.progressBarStatus {
+	font-size: 11px;
+	height: 16px;
+	padding-top: 2px;
+	text-align: left;
+	white-space: nowrap;
+	width: 337px;
+	color: #555;
+}
+
+.uploading {
+	background-image: url(wait.gif);
+	background-position: 35px -1px;
+	background-repeat: no-repeat;
+}
+
+a.progressCancel {
+	font-size: 0;
+	display: block;
+	height: 14px;
+	width: 14px;
+	background-image: url(../cancelbutton.gif);
+	background-repeat: no-repeat;
+	background-position: -14px 0px;
+	float: right;
+}
+
+a.progressCancel:hover {
+	background-position: 0px 0px;
+}
+/*- attachmets uploading -*/
+
+.syncTextTitleClass {
+	background:#FFFCDF;
+	border:1px solid #E6E4CB;
+	color:#555555;
+	font-size:11px;
+	padding:6px 10px;
+}
+
+.wm_settings_common .wm_settings_title {
+	white-space:nowrap;
+}

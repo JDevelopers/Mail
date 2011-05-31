@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Settings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Common>
+		<SiteName>AfterLogic WebMail Lite</SiteName>
+		<LicenseKey />
+		<AdminPassword />
+		<DBType>3</DBType>
+		<DBLogin />
+		<DBPassword />
+		<DBName />
+		<UseDsn>0</UseDsn>
+		<DBDSN />
+		<DBHost />
+		<UseCustomConnectionString>0</UseCustomConnectionString>
+		<DBCustomConnectionString />
+		<DBPrefix />
+		<DefaultSkin>AfterLogic</DefaultSkin>
+		<AllowUsersChangeSkin>1</AllowUsersChangeSkin>
+		<DefaultLanguage>English</DefaultLanguage>
+		<AllowUsersChangeLanguage>1</AllowUsersChangeLanguage>
+	</Common>
+	<WebMail>
+		<IncomingMailProtocol>0</IncomingMailProtocol>
+		<IncomingMailServer>localhost</IncomingMailServer>
+		<IncomingMailPort>110</IncomingMailPort>
+		<OutgoingMailServer>localhost</OutgoingMailServer>
+		<UseMultipleDomainsSelection>0</UseMultipleDomainsSelection>
+		<UseCaptcha>0</UseCaptcha>
+		<OutgoingMailPort>25</OutgoingMailPort>
+		<ReqSmtpAuth>1</ReqSmtpAuth>
+		<AllowAdvancedLogin>0</AllowAdvancedLogin>
+		<HideLoginMode>11</HideLoginMode>
+		<DefaultDomainOptional>localhost</DefaultDomainOptional>
+		<ShowTextLabels>1</ShowTextLabels>
+		<AutomaticCorrectLoginSettings>1</AutomaticCorrectLoginSettings>
+		<EnableLogging>0</EnableLogging>
+		<DisableErrorHandling>0</DisableErrorHandling>
+		<AllowAjax>1</AllowAjax>
+		<MailsPerPage>20</MailsPerPage>
+		<EnableAttachmentSizeLimit>0</EnableAttachmentSizeLimit>
+		<AttachmentSizeLimit>10240000</AttachmentSizeLimit>
+		<EnableMailboxSizeLimit>1</EnableMailboxSizeLimit>
+		<MailboxSizeLimit>102400000</MailboxSizeLimit>
+		<TakeImapQuota>0</TakeImapQuota>
+		<DefaultTimeZone>0</DefaultTimeZone>
+		<AllowUsersChangeTimeZone>1</AllowUsersChangeTimeZone>
+		<DefaultUserCharset>0</DefaultUserCharset>
+		<AllowUsersChangeCharset>1</AllowUsersChangeCharset>
+		<AllowDHTMLEditor>1</AllowDHTMLEditor>
+		<AllowUsersChangeEmailSettings>1</AllowUsersChangeEmailSettings>
+		<AllowDirectMode>1</AllowDirectMode>
+		<DirectModeIsDefault>0</DirectModeIsDefault>
+		<AllowNewUsersRegister>1</AllowNewUsersRegister>
+		<AllowUsersAddNewAccounts>1</AllowUsersAddNewAccounts>
+        <AllowUsersChangeAccountsDef>1</AllowUsersChangeAccountsDef>
+		<StoreMailsInDb>0</StoreMailsInDb>
+		<EnableWmServer>0</EnableWmServer>
+		<WmServerRootPath />
+		<WmServerHost>127.0.0.1</WmServerHost>
+		<WmAllowManageXMailAccounts>0</WmAllowManageXMailAccounts>
+		<AllowContacts>1</AllowContacts>
+		<AllowCalendar>1</AllowCalendar>
+		<AllowLanguageOnLogin>1</AllowLanguageOnLogin>
+		<Imap4DeleteLikePop3>1</Imap4DeleteLikePop3>
+		<AllowInsertImage>1</AllowInsertImage>
+		<AllowBodySize>0</AllowBodySize>
+		<MaxBodySize>600</MaxBodySize>
+		<MaxSubjectSize>255</MaxSubjectSize>
+		<IdleSessionTimeout>0</IdleSessionTimeout>
+		<AllowRegistration>0</AllowRegistration>
+		<AllowPasswordReset>0</AllowPasswordReset>
+	</WebMail>
+	<Calendar>
+		<DefaultTimeFormat>1</DefaultTimeFormat>
+		<DefaultDateFormat>1</DefaultDateFormat>
+		<ShowWeekends>1</ShowWeekends>
+		<WorkdayStarts>9</WorkdayStarts>
+		<WorkdayEnds>18</WorkdayEnds>
+		<ShowWorkDay>1</ShowWorkDay>
+		<WeekStartsOn>0</WeekStartsOn>
+		<DefaultTab>2</DefaultTab>
+		<DefaultCountry>US</DefaultCountry>
+		<DefaultTimeZone>38</DefaultTimeZone>
+		<AllTimeZones>0</AllTimeZones>
+	</Calendar>
+</Settings>

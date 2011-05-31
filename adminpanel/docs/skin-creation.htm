@@ -1,0 +1,377 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" Content="text-html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<h1>Creating your own skin</h1>
+<p>* all illustrations are for &quot;AfterLogic&quot; WebMail skin of Pro version.</p>
+<p>To create or modify WebMail skin, create new or modify existing style-sheet file "styles.css".</p>
+<p>How skins are stored in WebMail:</p>
+	<ul>
+		<li>All skins are located in "<b>skins</b>" folder under WebMail directory</li>
+		<li>Each skin is a folder inside "skins" folder</li>
+		<li>The skin folder's name is a skin name (e.g. "AfterLogic" skin resides in "skins\AfterLogic" folder)</li>
+		<li>Each skin folder contains "<b>styles.css</b>" file and related images</li>
+		<li>The system automatically scans "skins" folder to get skins list each time you enter WebMail's Administration panel</li>
+	</ul>
+<p>
+	Thus, to create new skin, just copy "skins\AfterLogic" folder with all contents
+	to new skin name (for example, "skins\MySkin"), and then modify styles in
+	"skins\MySkin\styless.css" file. You can use any CSS editor for this purpose
+	(such as free TopStyle Lite editor) or any text editor (such as Notepad).
+</p>
+<p>
+	You may also modify images in "skins\MySkin" folder if
+	you want to.
+</p>
+<p>
+	Finally, select new style in "skins" drop-down list in "Administration
+	Panel\Webmail settings" dialog.
+</p>
+<p>
+	WebMail system uses several style groups to define the appearance of user
+	interface. Each style group consists of a root style and a set of inner
+	styles. All root styles with their inner styles are listed below.
+</p>
+
+<h2>wm_login</h2>
+<p>Login panel, where a user should enter parameters of his account (fig.1)</p>
+
+<img src="img/skin-creation/wm-login.png" />
+<p>
+	Inner styles:
+	<table class="wmh_reg" cellpadding="4" cellspacing="0">
+	<tr>
+		<td class="wmh_desc_header">Class name</td>
+		<td class="wmh_desc_header">Description</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_input</td>
+		<td class="wmh_desc_content">Input field of the login panel, where a user enters his account info</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_title</td>
+		<td class="wmh_desc_content">Input fields titles of the dialog login panel.</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_login_header</td>
+		<td class="wmh_desc_content">Dialog window caption appearance.</td></tr>
+	</table>
+</p>
+
+<h2>wm_accountslist</h2>
+<p>Main header at the top of the WebMail screen where email account information, "Settings" and "Logout" links are displayed.</p>
+<img src="img/skin-creation/wm-accountslist.png" />
+<p>
+	Inner styles:
+	<table class="wmh_reg" cellpadding="4" cellspacing="0" style="border-collapse:collapse;">
+	<tr>
+		<td class="wmh_desc_header">Class name</td>
+		<td class="wmh_desc_header">Description</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_accountslist_email<br /> wm_accountslist_contacts<br />
+wm_accountslist_settings<br /> wm_accountslist_logout</td>
+		<td class="wmh_desc_content">Items in accounts list</td></tr>
+	</table>
+</p>
+<h2>wm_toolbar</h2>
+<p>Top toolbar of WebMail which contains toolbar icons.</p>
+<img src="img/skin-creation/wm-toolbar.png" /><br />
+<p>
+	Inner styles:
+	<table class="wmh_reg" cellpadding="4" cellspacing="0">
+	<tr>
+		<td class="wmh_desc_header">Class name</td>
+		<td class="wmh_desc_header">Description</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_toolbar_item</td>
+		<td class="wmh_desc_content">Toolbar item with functional buttons appearance.</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_toolbar_item_over</td>
+		<td class="wmh_desc_content">Toolbar item with functional buttons appearance when user moves cursor over the item.</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_toolbar_item_press</td>
+		<td class="wmh_desc_content">The style of "Move to folder" button when pressed.</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_tb_press</td>
+		<td class="wmh_desc_content">The style of "Mark as read" and "Reply" buttons when pressed.</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_popup_menu</td>
+		<td class="wmh_desc_content">Drop-down menu of toolbar</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_menu_item</td>
+		<td class="wmh_desc_content">Items in drop-down menu of toolbar.</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_menu_item_over</td>
+		<td class="wmh_desc_content">Items when targeted in drop-down menu of toolbar.</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_search_form</td>
+		<td class="wmh_desc_content">Pop-up searching form</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_toolbar_search_item_over</td>
+		<td class="wmh_desc_content">Searching form appearance when targeted and pressed.</td></tr>				
+	</table>
+</p>
+<h2>wm_inbox_page_switcher</h2>
+<p>Page switcher.</p>
+<img src="img/skin-creation/wm-page-switcher.png" />
+<p>
+	Inner styles:
+	<table class="wmh_reg" cellpadding="4" cellspacing="0">
+	<tr>
+		<td class="wmh_desc_header">Class name</td>
+		<td class="wmh_desc_header">Description</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_inbox_page_switcher_pages</td>
+		<td class="wmh_desc_content">All pages.</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_inbox_page_switcher_pages font</td>
+		<td class="wmh_desc_content">Current page.</td></tr>
+	</table>
+</p>
+<h2>wm_mail_container</h2>
+<p>Container for a list of folders and list of messages.</p>
+<h2>wm_folders</h2>
+<p>Folders list.<p>
+<img src="img/skin-creation/wm-folders.png" />
+<p>
+	Inner styles:
+	<table class="wmh_reg" cellpadding="4" cellspacing="0">
+	<tr>
+		<td class="wmh_desc_header">Class name</td>
+		<td class="wmh_desc_header">Description</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_folders_part</td>
+		<td class="wmh_desc_content">Folders list container.</td></tr>
+	</table>
+</p>
+
+<h2>wm_inbox</h2>
+<p>Main list box where read, unread, selected and filtered messages are displayed.</p>
+<img src="img/skin-creation/wm-list.png" />
+<p>
+	Inner styles:
+	<table class="wmh_reg" cellpadding="4" cellspacing="0">
+	<tr>
+		<td class="wmh_desc_header">Class name</td>
+		<td class="wmh_desc_header">Description</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_inbox_headers</td>
+		<td class="wmh_desc_content">Message list header.</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_inbox_headers_separate</td>
+		<td class="wmh_desc_content">Stripes which delimit headers items from each other.</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_inbox_item</td>
+		<td class="wmh_desc_content">New messages in the message list.</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_inbox_item_select</td>
+		<td class="wmh_desc_content">New messages in the message list which are selected.</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_inbox_read_item</td>
+		<td class="wmh_desc_content">Read messages in the message list.</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_inbox_read_item_select</td>
+		<td class="wmh_desc_content">Read messages in the message list, which are selected.</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_inbox_deleted_item</td>
+		<td class="wmh_desc_content">Deleted messages in the message list.</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_inbox_deleted_item_select</td>
+		<td class="wmh_desc_content">Deleted messages in the message list, which are selected.</td></tr>
+
+	</table>
+</p>
+
+<h2>wm_lowtoolbar</h2>
+<p>Lower toolbar of system displayed under messages list.</p>
+<img src="img/skin-creation/wm-low-toolbar.png" />
+<p>
+	Inner styles:
+	<table class="wmh_reg" cellpadding="4" cellspacing="0">
+	<tr>
+		<td class="wmh_desc_header">Class name</td>
+		<td class="wmh_desc_header">Description</td></tr>
+	<tr>
+		<td class="wmh_desc_content">.wm_lowtoolbar_space_info .wm_progressbar</td>
+		<td class="wmh_desc_content">A part of progress bar which graphically indicates 100% of user mailbox quota.</td></tr>
+	<tr>
+		<td class="wmh_desc_content">.wm_lowtoolbar_space_info .wm_progressbar_used</td>
+		<td class="wmh_desc_content">A part of progress bar which indicates used space of a current account. </td></tr>
+	<tr>
+		<td class="wmh_desc_content">.wm_lowtoolbar_space_info .wm_progressbar_all_used</td>
+		<td class="wmh_desc_content">A part of progress bar which indicates used space of other accounts. </td></tr>
+	</table>
+</p>
+
+<h2>wm_progressbar</h2>
+<p>The part of the progress bar showing how much of the download mail operation is already complete (at the start of download, only 0% is complete).</p>
+<img src="img/skin-creation/wm-progress-bar.png" />
+<p>
+	Inner styles:
+	<table class="wmh_reg" cellpadding="4" cellspacing="0">
+	<tr>
+		<td class="wmh_desc_header">Class name</td>
+		<td class="wmh_desc_header">Description</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_progressbar</td>
+		<td class="wmh_desc_content">A part of progress-bar where the progress of downloading mail will be performed.</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_progressbar_used</td>
+		<td class="wmh_desc_content">A part of the progress bar showing how much of the download mail operation was completed (at the start of download, whole 100% is to go).</td></tr>
+	</table>
+</p>
+
+<h2>wm_message_container</h2>
+<p>Email message layout displayed in View Message and Preview Pane mode.</p>
+<img src="img/skin-creation/wm-message-container.png" />
+<p>
+	Inner styles:
+	<table class="wmh_reg" cellpadding="4" cellspacing="0">
+	<tr>
+		<td class="wmh_desc_header">Class name</td>
+		<td class="wmh_desc_header">Description</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_view_message</td>
+		<td class="wmh_desc_content">Message header field captions appearance such as "From", "To", "Subject" etc. in "view message" mode.</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_message_headers</td>
+		<td class="wmh_desc_content">Message header field captions appearance such as "From", "To", "Subject" etc. in "preview pane" mode.</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_message_attachments</td>
+		<td class="wmh_desc_content">List of attachments.</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_message</td>
+		<td class="wmh_desc_content">Message body.</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_message_body_quotation</td>
+		<td class="wmh_desc_content">Quoted strings appearance in message body.</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_message_rfc822</td>
+		<td class="wmh_desc_content">Appearance of message rfc822 headers.</td></tr>
+	</table>
+</p>
+
+<h2>wm_new_message</h2>
+<p>The form of a new message creation.</p>
+<img src="img/skin-creation/wm-new-message.png" />
+<p>
+	Inner styles:
+	<table class="wmh_reg" cellpadding="4" cellspacing="0">
+	<tr>
+		<td class="wmh_desc_header">Class name</td>
+		<td class="wmh_desc_header">Description</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_attachment</td>
+		<td class="wmh_desc_content">The list of attachments.</td></tr>
+	</table>
+</p>
+
+<h2>wm_html_editor</h2>
+<p>html-editor.</p>
+<p>
+	Inner styles:
+	<table class="wmh_reg" cellpadding="4" cellspacing="0">
+	<tr>
+		<td class="wmh_desc_header">Class name</td>
+		<td class="wmh_desc_header">Description</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_html_editor_toolbar</td>
+		<td class="wmh_desc_content">The list of available tools for text editing.</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_html_editor_cell</td>
+		<td class="wmh_desc_content">Field of text entry.</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_color_palette</td>
+		<td class="wmh_desc_content">Drop-down menu "color palette".</td></tr>
+
+	</table>
+</p>
+
+<h2>wm_contacts</h2>
+<p>The list of contacts and contact groups.</p>
+<img src="img/skin-creation/wm-contacts.png" />
+<p>All styles in use for wm_inbox are applied here as well.</p>
+
+<h2>wm_contacts_view_edit</h2>
+<p>The list of settings or contact properties.</p>
+<img src="img/skin-creation/wm-contacts-edit.png" />
+<br /><br />
+<img src="img/skin-creation/wm-contacts-view.png" />
+<p>
+	Inner styles:
+	<table class="wmh_reg" cellpadding="4" cellspacing="0">
+	<tr>
+		<td class="wmh_desc_header">Class name</td>
+		<td class="wmh_desc_header">Description</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_contacts_card_line1, wm_contacts_card_line2,<br />wm_contacts_card_line3, wm_contacts_card_line4,<br />wm_contacts_card_line5, wm_contacts_card_content</td>
+		<td class="wmh_desc_content">The frame embracing the contact information.</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_contacts_tab</td>
+		<td class="wmh_desc_content">A title of contact information section in the mode of contacts editing.</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_contacts_name</td>
+		<td class="wmh_desc_content">Titles marked with large type in view contact information mode.</td></tr>
+	</table>
+</p>
+
+<h2>wm_settings</h2>
+<p>Mail account settings.</p>
+<img src="img/skin-creation/wm-settings-manage-folders.png" />
+<p>
+	Inner styles:
+	<table class="wmh_reg" cellpadding="4" cellspacing="0">
+	<tr>
+		<td class="wmh_desc_header">Class name</td>
+		<td class="wmh_desc_header">Description</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_settings_nav</td>
+		<td class="wmh_desc_content">Settings navigation panel.</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_selected_settings_item</td>
+		<td class="wmh_desc_content">Selected element at the settings navigation panel.</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_settings_cont</td>
+		<td class="wmh_desc_content">Settings container.</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_settings_list</td>
+		<td class="wmh_desc_content">Accounts list.</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_settings_list_select</td>
+		<td class="wmh_desc_content">Selected account in the accounts list.</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_settings_accounts_info</td>
+		<td class="wmh_desc_content">Area for tabs in "Email Accounts" options list.</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_settings_switcher_indent</td>
+		<td class="wmh_desc_content">Right indent in tabs sequence.</td></tr>		
+	<tr>
+		<td class="wmh_desc_content">wm_settings_switcher_item</td>
+		<td class="wmh_desc_content">Tabs in "Email Accounts" options list </td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_settings_switcher_select_item</td>
+		<td class="wmh_desc_content">Current selected tab.</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_settings_mf_headers</td>
+		<td class="wmh_desc_content">Appearance style of the "Folder", "Msg's", "Size", "Synchronize" etc. headers in the "Manage Folders" tab.</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_settings_mf_total</td>
+		<td class="wmh_desc_content">Totals panel positioned lower than folders list in the "Manage Folders" tab.</td></tr>
+	<tr>
+		<td class="wmh_desc_content">wm_settings_manage_folders td</td>
+		<td class="wmh_desc_content">Separating stripe in the folders list of the "Manage Folders" tab.</td></tr>		
+	</table>
+</p>
+
+<h2>WebMail icons</h2>
+<p>
+	All icons used in WebMail are placed in 2 base .png files: mail.png and editor.png. File mail.png contains icons for toolbar, folders, contacts and others. File editor.png contains icons for rich text editor and for displaying attachment's type while adding attachments to new message or viewing message with attachments. mail.png for "AfterLogic" skin looks like this:
+</p>
+<img src="img/skin-creation/afterlogic-mail.png" width="800" height="240" />
+<p>All the icons are placed into a grid with 40x40 pixel cells.</p>
+<p>Icons for toolbar are placed into the first and the second line. Most grid cells are empty as "AfterLogic" skin doesn't use many toolbar icons.</p>
+<p>The third line contains folder icons.</p>
+<p>The 4th line contains icons for popup menus in toolbar, messages list, message drag-n-drop, adding contact and others.</p>
+<p>The 5th line contains icons for selecting account, settings menu, page switcher, error and info messages.</p>
+
+</body>
+</html>

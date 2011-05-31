@@ -1,0 +1,36 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" Content="text-html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<h1>Database Settings</h1>
+<img src="img/webmail-database-settings.png" />
+<h2>1. Database engine</h2>
+<dl><dd>Here, you should choose database engine WebMail Lite will store data in.</dd></dl>
+<h2>2. Connection settings</h2>
+<dl>
+	<dt>SQL Login</dt>
+	<dd>Specifies Login name to access SQL database. <i>For MS SQL and MySQL only.</i></dd>
+	<dt>SQL password</dt>
+	<dd>Specifies Password to access SQL database. <i>For MS SQL and MySQL only.</i></dd>
+	<dt>Database name</dt>
+	<dd>The name of database in SQL server where you want WebMail to operate with. All required tables are created automatically ones by WebMail, when you first time enter database name. <i>For MS SQL and MySQL only.</i></dd>
+	<dt>Host</dt>
+	<dd>Specify Host field if you wish to connect through TCP/IP. <i>For MS SQL and MySQL only.</i></dd>
+	<dt>ODBC Data source (DSN)</dt>
+	<dd>Specify Data Source Name if you wish to connect to database through DSN. <i>This is alternative way to connect to database, the above fields (SQL Login, SQL password, Database name, Host) will not be used.</i></dd>
+	<dt>ODBC Connection String</dt>
+	<dd>Specify your own ODBC connection string if you wish to connect to database through a specific connection string. <i>This is alternative way to connect to database, the above fields (SQL Login, SQL password, Database name, Host) will not be used.</i></dd>
+</dl>
+<h2>3. Test database connectivity to check if the specified settings are correct</h2>
+<dl>
+	<dt>Test Connection</dt>
+	<dd>Click it to check if the above settings are correct and connection can be established fine.</dd>
+	<dt>Create tables</dt>
+	<dd>Creates database tables required by WebMail Lite. If you specified a database which doesn't contain WebMail Lite tables yet, you need to click this button.</dd>
+	<dt>Update</dt>
+	<dd>If you're upgrading between major WebMail Lite releases (e.g. from 4.6 to 4.7), you need to update your existing database by clicking this button.</dd>
+</dl>
+</body>
+</html>

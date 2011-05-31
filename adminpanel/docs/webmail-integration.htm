@@ -1,0 +1,201 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" Content="text-html; charset=UTF-8">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body>
+		<html>
+<head>
+<meta http-equiv="Content-Type" Content="text-html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+	<body>
+	<h1>Integrating into another web application</h1>
+	<p>AfterLogic WebMail can be easily integrated into any existing PHP application. There are two integration aspects:</p>
+	<ul>
+		<li>interface - make WebMail interface a part of your PHP application interface;</li>
+		<li>user accounts database - allow your application to pass credentials to WebMail to achieve bypassing WebMail's login screen and entering user's email account directly.</li>
+	</ul>
+			
+	<a name="interface-aspect" class="wmh_txt"></a>
+	<h2>Interface aspect</h2>
+	<p>You may need to make WebMail interface a part of your web site interface. For example, if your web site has several sections (e.g. "My Blog", "My Pictures", "My Mail") and a navigation menu which should always stay on the screen (no matter which section is currently selected), WebMail shouldn't overlap the navigation menu and shouldn't be opened in a separate window. To achieve this, you need to place WebMail into an <b>iframe</b> which is a part of your interface. Placing WebMail directly into your interface (e.g. into a <b>div</b> element) is not possible as it's complex AJAX application which relies to absolute coordinates and has its own system of exchanging XML packets with server. So, an <b>iframe</b> is the only way to get it working properly.</p>
+	<p>How to place WebMail into an <b>iframe</b> correctly? The following simple example demonstrates that:</p>
+<pre class="wmh_codeSample">
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" /&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;iframe test&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div style="background-color: #EEE; width: 900px;">Your navigation menu here&lt;/div&gt;&lt;br /&gt;
+        &lt;iframe src="http://www.afterlogic.com/webmail-lite/" style="width: 900px; height: 600px;"&gt;&lt;/iframe&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+	<p>Here, you can see <a href="http://www.afterlogic.com/webmail-lite/" target="_blank">http://www.afterlogic.com/webmail-lite/</a>. It points to AfterLogic WebMail Lite live demo at our web site. You should change this URL to the one pointing to your WebMail installation.</p>
+			
+	<a name="accounts-database" class="wmh_txt"></a>
+	<h2>User accounts database aspect</h2>
+	<p>If your web site has its own sign in form where users should specify their e-mail (or just login) and password to log into their private area, it makes sense to use these credentials to log into their WebMail Lite accounts. Of course, it's inconvenient to type the same credentials again in WebMail sing-in form. Special integration API allows you to avoid this. It allows direct entering not only message list, but other WebMail screens like compose new message.</p>
+	<p>To bypass WebMail sign in screen and enter user's email account directly, it's necessary to pass some data that identify user in WebMail system. WebMail provides <b>CIntegration</b> object for this purpose.</p>
+			
+	<a name="accounts-database" class="wmh_txt"></a>
+	
+	<h2>Usage of CIntegration object is simple:</h2>
+			
+		<ol>
+			<li>Include integr.php file which is located in the root folder of your AfterLogic WebMail installation:
+				<br /><br />
+				<pre class="wmh_codeSample">include('integr.php');</pre>
+				<p>
+					If the file you're adding this code to is outside of WebMail root folder, you should specify the appropriate path to integr.php.
+				</p>
+			</li>
+			<li>Create "CIntegration" object:
+				<br /><br />
+				<pre class="wmh_codeSample">$Integr = new CIntegration($webmailrootpath = null);</pre>
+				<p>$webmailrootpath - URL path to the WebMail root folder necessary for correct UserLoginByEmail method work. If the script calling UserLoginByEmail method is located in the WebMail root folder, or UserLoginByEmail method is not called, you may omit passing this parameter. Please note, it's not a physical path like C:\inetpub\wwwroot\WebMail or /var/www/html/webmail, but an URL like http://www.mydomain.com/webmail or relative URL like subparts/webmail.</p>
+			</li>
+			<li>Now, for instance, we need to log a user into WebMail bypassing standard sign in screen. Let's call UserLoginByEmail method for this purpose:
+				<br /><br />
+				<pre class="wmh_codeSample">$Integr->UserLoginByEmail($email, $login, $startPage, $password);</pre>
+				<p>
+					$email - user's full e-mail address;<br />
+					$login - user's login (username). It may be either full e-mail address or just username without domain part, depends on your mail server configuration;<br />
+					$password - user's password. Optional parameter;<br />
+					$startPage - a constant determining the screen the user will be redirected to after logging in.
+				</p>
+			</li>
+		</ol>
+		<p>For more various examples, see <a href="#examples">Usage Examples</a>.</p>
+			
+		<a name="methods" class="wmh_txt"></a>
+		<h3>Methods:</h3>
+			<p>
+			<table cellpadding="4" cellspacing="0" class="wmh_reg" border="0">
+				<tr>
+					<td class="wmh_desc_content" width="220"><i>GetAccountById($id)</i></td>
+					<td class="wmh_desc_content">
+						Gets <a href="#account">Account</a> object by id of user in the database (awm_accounts.id_acct), or null on error.
+					</td>
+				</tr>
+				<tr>
+					<td class="wmh_desc_content" width="220">
+						<i>UserLoginByEmail($email, $login, 
+						$startPage, $password, $toEmail)</i></td>
+						<td class="wmh_desc_content">Performs login and redirects the user into WebMail system. IMPORTANT: that user must already exist in WebMail Lite database, otherwise, logging in will fail, in this case, it's necessary to create the user first.
+						<br><br>
+						$email, $login - required parameters.<br>
+						$startPage - a constant determining the screen the user will be redirected to after logging in.<br>
+						$password - optional parameter. If omitted or null, password validation is not performed, i.e. means "any password", but not "empty password".<br>
+						$toEmail - optional parameter. Specifies e-mail address automatically set in To field in WebMail compose message screen in case if $startPage = START_PAGE_IS_NEW_MESSAGE
+					</td>
+				</tr>
+				<tr>
+					<td class="wmh_desc_content" width="220"><i>GetErrorString()</i></td>
+					<td class="wmh_desc_content">
+						Gets the last error description.
+					</td>
+				</tr>
+			</table>
+		</p>
+		<p>
+			<a name="consts" class="wmh_txt"><b>$startPage constants (determines the screen the user will be redirected to after logging in)</b></a>
+		</p>
+		<p>
+			<table cellpadding="4" cellspacing="0" class="wmh_reg" border="0" ID="Table1">
+				<tr>
+					<td class="wmh_desc_header">Value</td>
+					<td class="wmh_desc_header">Description</td>
+				</tr>
+				<tr>
+					<td class="wmh_desc_content" width="220" height="25"><i>START_PAGE_IS_MAILBOX</i></td>
+					<td class="wmh_desc_content" height="25">Message list screen.</td>
+				</tr>
+				<tr>
+					<td class="wmh_desc_content"><i>START_PAGE_IS_NEW_MESSAGE</i></td>
+					<td class="wmh_desc_content">Compose message screen.</td>
+				</tr>
+				<tr>
+					<td class="wmh_desc_content"><i>START_PAGE_IS_SETTINGS</i></td>
+					<td class="wmh_desc_content">User's settings screen.</td>
+				</tr>
+				<tr>
+					<td class="wmh_desc_content"><i>START_PAGE_IS_CONTACTS</i></td>
+					<td class="wmh_desc_content">User's contacts screen (addressbook).</td>
+				</tr>
+			</table>
+		</p>
+		
+		<a name="examples" class="wmh_txt"></a>
+		<h2>Usage examples:</h2>
+		<a name="example1" class="wmh_txt"></a>
+		<h3>Example 1</h3>
+		<p>On the PHP page you want to launch WebMail from, add the lines like the ones below. As integr.php is included from the current folder and CIntegration instance is created without the optional argument ($webmailrootpath), it's assumed that the page you're adding this code to is placed into WebMail root folder. Also, the account you need to log into must already exist in WebMail Lite database.</p>
+<pre class="wmh_codeSample">
+&lt;?php
+include('integr.php');
+$Integr = new CIntegration();
+
+$mail = 'login@domain.com';
+$login = 'login';
+$pass = 'password';
+
+$Integr-&gt;UserLoginByEmail($mail, $login, START_PAGE_IS_MAILBOX, $pass);
+?&gt;
+</pre>
+		<p>The code above redirects to WebMail and immediately opens "login@domain.com" account.</p>
+		<p>Once UserLoginByEmail method called, there are two cases possible:</p>
+		<ol>
+			<li>Specified email address was found in WebMail database. The user is redirected to Inbox of the email account. Email account properties are taken from the database (you can adjust them in Admin Panel).</li>
+			<li>Specified email address was NOT found in WebMail database. In such case the method returns false.</li>
+		</ol>
+
+		<a name="example2" class="wmh_txt"></a>
+		<h3>Example 2</h3>
+		<p>Now, let's take advantage of both the integration aspects. First, please create test-iframe.php file and copy/paste the code from <b>Example 4</b> there, then modify the example to get it working in your environment. It's assumed that you placed that file into the web folder of your PHP application. Now, just add the following line to one of your PHP pages:</p>
+<pre class="wmh_codeSample">
+&lt;iframe src="test-iframe.php" style="width: 900px; height: 600px;"&gt;&lt;/iframe&gt;
+</pre>
+		<p>As you can see, it refers to the file with the integration script you created previously. Both test-iframe.php and the page you placed the <b>iframe</b> to are in the same folder.</p>
+		<p>Now, you may wonder how to pass authentication data from your PHP application to UserLoginByEmail method called in test-iframe.php. Don't pass that data through GET method (in URL after ? char) for security reasons, but use server-side PHP sessions instead. Example:</p>
+		<ul>
+			<li>index.php file:
+<pre class="wmh_codeSample">
+&lt;?php
+
+session_start();
+
+// Store credentials in session
+$_SESSION['email'] = 'john_doe@mydomain.com';
+$_SESSION['login'] = 'john_doe';
+$_SESSION['password'] = 'mypassword';
+?&gt;
+&lt;iframe src="test-iframe.php" style="width: 900px; height: 600px;"&gt;&lt;/iframe&gt;
+</pre>
+				</li>
+				<li>test-iframe.php file:
+<pre class="wmh_codeSample">
+&lt;?php
+
+include('C:\Projects\webmail\integr.php');
+
+session_start();
+
+$Integr = new CIntegration('http://www.mydomain.com/webmail/');
+
+if (!$Integr->UserLoginByEmail($_SESSION['email'], $_SESSION['login'], START_PAGE_IS_MAILBOX, $_SESSION['password']))
+{
+    echo 'Error: failed to log into the account. Reason: ' . $Integr->GetErrorString();
+}
+?&gt;
+</pre>
+			</li>
+		</ul>
+	
+		<p>
+			Lite version of AfterLogic WebMail doesn't provide any other integration features besides bypassing login screen described above. However, you may take a look at <a href="http://www.afterlogic.com/products/webmail-pro" target="_blank">Pro version</a> which provides advanced integration capabilities - <a href="http://www.afterlogic.com/products/webmail-pro-php-docs/webmail-integration.htm" target="_blank">integration API</a>.
+		</p>
+	</body>
+</html>

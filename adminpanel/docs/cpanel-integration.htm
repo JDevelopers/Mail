@@ -1,0 +1,193 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" Content="text-html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<h1>cPanel Integration</h1>
+<p>This manual applies to AfterLogic WebMail Lite PHP  (referenced in this document as WebMail).</p>
+<p>To integrate WebMail into cPanel, you need to install WebMail on cPanel server and edit a few cPanel scripts.</p>
+<p>Files related to cPanel integration are located in <b>webmail/cpanel_integration</b> folders inside WebMail installation package.</p>
+<p>List of files and short description of each (in <b>webmail</b> folder of WebMail):</p>
+<ol>
+	<li>cpanel_integration/cpanel.php - a script which handles requests from cPanel</li>
+	<li>cpanel_integration/cpanelwmlogo.png – a WebMail logo to be displayed in cPanel webmail selection screen (the screen where the user can select which webmail to use, change email settings, etc)</li>
+	<li>cpanel_integration/cpanel.x3.index.html - a patch for cpanel/base/webmail/x3/index.html file. This file represents the layout of cPanel webmail selection screen for x3 theme</li>
+	<li>cpanel_integration/cpanel.x3.index.single.html - a patch for cpanel/base/webmail/x3/index.html file. This file represents the layout of cPanel webmail selection screen for x3 theme with single AfterLogic WebMail</li>
+	<li>cpanel_integration/cpanel.x.index.html - a patch for cpanel/base/webmail/x/index.html file. This file represents the layout of cPanel webmail selection screen for x theme</li>
+	<li>cpanel_integration/cpanel.x.index.single.html - a patch for cpanel/base/webmail/x/index.html file. This file represents the layout of cPanel webmail selection screen for x theme with single AfterLogic WebMail</li>
+	<li>cpanel_integration/cpanel.x.webmaillogin.html - a patch for /cpanel/base/frontend/x/webmaillogin.html file. This file represents the layout of cPanel webmail selection screen for x theme inside WHM itself</li>
+	<li>cpanel_integration/cpanel.x.webmaillogin.single.html - a patch for /cpanel/base/frontend/x/webmaillogin.html file. This file represents the layout of cPanel webmail selection screen for x theme with single AfterLogic WebMail inside WHM itself</li>
+</ol>
+
+
+<h2>1. AfterLogic WebMail installation</h2>
+<p>Install AfterLogic WebMail into /usr/local/cpanel/base/wm/ folder. Installation instructions are available <a href="installation-instructions.htm" >here</a>.</p>
+<p>After installation complete your /usr/local/cpanel/base/wm/ folder should have the following content:</p>
+<img src="img/cpanel-integration/pic8.png">
+
+<p>Do not forget to set read/write permissions for all users (777) for /usr/local/cpanel/base/wm/data/ folder and all its subfolders and set apache.apache as the owner of /usr/local/cpanel/base/wm/data folder and all its contents.</p>
+
+<h2>2. cPanel integration</h2>
+<p>In order to embed AfterLogic WebMail into cPanel webmail screen, we need to modify cPanel's skins. Some files to be modified may be write-protected. In this case you need to run the following command on each file in need to be modified:</p>
+<pre>
+	chattr -i &lt;filename&gt;
+</pre>
+<p>AfterLogic WebMail can be added to list of available webmails in two ways:</p>
+<ol>
+	<li>As one more webmail. In this case cPanel will present list available of webmails and AfterLogic WebMail as one of them</li>
+	<li>2.As single webmail. In this case AfterLogic WebMail will be the only available webmail, presented by cPanel</li>
+</ol>
+<p>What type of installation to choose – is completely up to you.</p>
+
+<h3>2.1 cPanel integration. X3 theme</h3>
+<h4>2.1.1 Adding WebMail as one more webmail</h4>
+	<p>Let's make integration with x3 skin (default in cPanel 11).</p>
+	<ul>
+	<li>go to the folder where x3 skin files of cPanel webmail selection screen reside:
+<pre>
+cd /usr/local/cpanel/base/webmail/x3
+</pre>
+	</li>
+	<li>make backup for /usr/local/cpanel/base/webmail/x3/index.html
+<pre>
+cp index.html index.bak.html
+</pre>
+	</li>
+	<li>open index.html in a text editor and add content of cpanel.x3.index.html file AFTER this section:
+<pre>
+&lt;div align=&quot;center&quot;&gt;
+&lt;table align=center width=&quot;700&quot; border=&quot;0&quot;&gt;
+&lt;tr align=&quot;center&quot;&gt;
+</pre>
+	</li>
+	<li>
+		Results of this patch are presented on the following picture:<br>
+		<img src="img/cpanel-integration/pic1.png">
+	</li>
+
+</ul>	
+<h4>2.1.2 Adding WebMail as single webmail</h4>
+<p>Let's make integration with x3 skin (default in cPanel 11).</p>
+
+<ul>
+	<li>go to the folder where x3 skin files of cPanel webmail selection screen reside:
+<pre>
+cd /usr/local/cpanel/base/webmail/x3
+</pre>
+	</li>
+	<li>make backup for /usr/local/cpanel/base/webmail/x3/index.html
+<pre>
+cp index.html index.bak.html
+</pre>
+	</li>
+	<li>open index.html in a text editor and replace its content with the content of cpanel.x3.index.single.html file</li>
+
+	<li>Results of this patch are presented on the following picture:<br />
+		<img src="img/cpanel-integration/pic2.png">
+	</li>
+</ul>
+<h3>2.1 cPanel integration. X theme</h3>
+<h4>2.2.1 Adding WebMail as one more webmail</h4>
+<p>Let's make integration with x skin</p>
+<ul>
+	<li>go to the folder where x skin files of cPanel webmail selection screen reside:
+<pre>
+cd /usr/local/cpanel/base/webmail/x
+</pre>
+	</li>
+	<li>make backup for /usr/local/cpanel/base/webmail/x/index.html
+<pre>
+cp index.html index.bak.html
+</pre>
+	</li>
+	<li>open index.html in a text editor and add content of cpanel.x.index.html file AFTER this section:
+<pre>
+&lt;div align=&quot;center&quot;&gt;
+&lt;table align=center width=&quot;700&quot; border=&quot;0&quot;&gt;
+&lt;tr align=&quot;center&quot;&gt;
+<pre>
+	</li>
+	<li>Results of this patch are presented on the following picture:<br />
+		<img src="img/cpanel-integration/pic3.png">
+	</li>
+</ul>
+<h4>2.2.2 Adding WebMail as single webmail</h4>
+<p>Let's make integration with x skin</p>
+<ul>
+	<li>go to the folder where x skin files of cPanel webmail selection screen reside:
+<pre>
+cd /usr/local/cpanel/base/webmail/x
+</pre>
+	</li>
+	<li>make backup for /usr/local/cpanel/base/webmail/x/index.html
+<pre>
+cp index.html index.bak.html
+</pre>
+	</li>
+	<li>open index.html in a text editor and  replace its content with the content of cpanel.x.index.single.html file.</li>
+	<li>Results of this patch are presented on the following picture:<br />
+		<img src="img/cpanel-integration/pic4.png">
+	</li>
+</ul>
+<h3>2.3 cPanel integration. X theme. Administration area front-end</h3>
+<h4>2.3.1 Adding WebMail as one more webmail</h4>
+<p>Let's make integration with x skin front-end part</p>
+<ul>
+	<li>go to the folder where x skin files of cPanel webmail front-end login:
+<pre>
+cd /usr/local/cpanel/base/frontend/x
+</pre>
+	</li>
+	<li>make backup for /usr/local/cpanel/base/frontend/x/webmaillogin.html
+<pre>
+cp webmaillogin.html webmaillogin.bak.html
+</pre>
+	</li>
+	<li>open webmaillogin.html in a text editor and add content of cpanel.x.webmaillogin.html file AFTER this section:
+<pre>
+&lt;table align=center width=&quot;600&quot; border=&quot;0&quot;&gt;
+&lt;tr align=&quot;center&quot;&gt;
+</pre>
+	</li>
+	<li>Results of this patch are presented on the following picture:<br />
+		<img src="img/cpanel-integration/pic5.png">
+	</li>
+</ul>
+<h4>2.3.2 Adding WebMail as single webmail</h4>
+<p>Let's make integration with x skin front-end part</p>
+<ul>
+	<li>go to the folder where x skin files of cPanel webmail front-end login:
+<pre>
+cd /usr/local/cpanel/base/frontend/x
+</pre>
+	</li>
+	<li>make backup for /usr/local/cpanel/base/frontend/x/webmaillogin.html
+<pre>
+cp webmaillogin.html webmaillogin.bak.html
+</pre>
+	</li>
+	<li>open webmaillogin.html in a text editor replace its content with the content of cpanel.x.webmaillogin.single.html file.</li>
+	<li>Results of this patch are presented on the following picture:<br />
+		<img src="img/cpanel-integration/pic6.png">
+	</li>
+</ul>
+<p>Do not forget to change attributes back for all files that were modified before</p>
+<pre>
+    chattr +i &lt;file name&gt;
+</pre>
+<p>We are almost done. Now you can visit</p>
+<p>http://your.domain.name/webmail/</p>
+<p>in order to see cPanel webmail selection screen presented on the following screen:<br />
+	<img src="img/cpanel-integration/pic7.png">
+</p>
+<p>AutoLoad feature works too so that you can set AfterLogic WebMail as the default webmail.
+<p>If you want to use another cPanel skin, you need to adapt the patch to fit another layout.</p>
+
+<h2>3. AfterLogic WebMail AdminPanel</h2>
+<p>To access AdminPanel, type the URL of AfterLogic WebMail and add /adminpanel. For instance:</p>
+<p>http://www.mydomain.com:2095/wm/adminpanel/</p>
+
+<p>Because cPanel may use different port and URL mappings in various configurations, it’s often easier to navigate to http://your.domain.name/webmail/ and then log in AfterLogic WebMail to learn its URL. Now, you can append /adminpanel to that URL to get into AdminPanel.</p>
+</body>
+</html>

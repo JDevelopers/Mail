@@ -1,0 +1,33 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" Content="text-html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<h1>Login Page Settings</h1>
+<img src="img/webmail-login-settings.png" />
+<dl>
+	<dt>Standard Login Panel</dt>
+	<dd>All fields are displayed (email, login, password).</dd>
+	<dt>Hide login field</dt>
+	<dd>Hide login field and take it from email:<br><br>
+		<b>Use Email as Login</b> - whole email address is used as login (e.g. if email is jdoe@domain.com, login will be jdoe@domain.com)<br><br>
+		<b>Use Account Name as Login</b> - truncate email address from "@" and use the remainder (e.g. if email is jdoe@domain.com, login will be jdoe)
+	</dd>
+	<dt>Hide email field</dt>
+	<dd>Hide Email field and build e-mail address from login field and, optionally, from domain<br><br>
+	   <b>Display Domain After Login Field</b> - on login form, "@"domain will be displayed after login field. This parameter affects only visual look of login panel. Decision on how to build login or email address is not altered.
+	   <br><br>
+	   <b>Login as concatenation of "Login" field + "@" + domain.</b> If ticked, WebMail will construct email account login as concatenation of Login field contents + "@" + domain. You should use this if logins on your mail server look like jdoe@domain.com (i.e. they are the same as email address). Do NOT use this option if logins look like jdoe (e.g. just account name, without domain). 
+	</dd>
+	<dt>Allow choosing language on login</dt>
+	<dd>Shows or hides dropdown list with languages on login page where user can choose necessary language of user interface before logging in.</dd>
+	<dt>Allow advanced login</dt>
+	<dd>If checked, clients of the WebMail system will be able to use the system with POP3/IMAP4/SMTP servers different from specified in POP3/IMAP4/SMTP Server settings.</dd>
+	<dt>Automatically detect and correct if user inputs e-mail instead of account-name.</dt>
+	<dd>Allow WebMail to detect and fix when user inputs email instead of login, or login instead of email, and it's possible to determine correct login or e-mail from typed. Example: if user inputs full email address in Login field (while only account name is expected), WebMail will automatically drop @domain part.</dd>
+	<dt>Enable CAPTCHA</dt>
+	<dd>A security enhancement feature protecting WebMail interface from automated signups and multiple invalid login attempts.</dd>
+</dl>
+</body>
+</html>

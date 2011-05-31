@@ -1,0 +1,2 @@
+Powered by <a href="http://www.afterlogic.com/products/webmail-lite" target="_blank">AfterLogic WebMail Lite</a><br />
+Copyright &copy; 2002-2010 <a href="http://www.afterlogic.com" target="_blank">AfterLogic Corporation</a>

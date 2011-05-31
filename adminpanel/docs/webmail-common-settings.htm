@@ -1,0 +1,65 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" Content="text-html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<h1>Common Settings</h1>
+<img src="img/webmail-common-settings.png" />
+<h2>WebMail Settings</h2>
+<dl>
+	<dt>Site name</dt>
+	<dd>Title that will be shown in browser's header.</dd>
+</dl>
+<h2>Default Mail Server Settings</h2>
+<img src="img/webmail-common-settings1.png" />
+<dl>
+	<dt>Incoming mail</dt>
+	<dd>Incoming mail server name or IP, such as "pop.server.com".</dd>
+	<dt>Incoming mail port</dt>
+	<dd>Incoming mail server port (by default, 110 for POP3 and 143 for IMAP4).</dd>
+	<dt>POP3/IMAP</dt>
+	<dd>Protocol used for connecting to the incoming mail server.</dd>
+	<dt>Outgoing mail</dt>
+	<dd>Outgoing mail server name or IP, such as "smtp.server.com".</dd>
+	<dt>Outgoing mail Port</dt>
+	<dd>Outgoing mail server port (25 by default).</dd>
+	<dt>Requires SMTP authentication</dt>
+	<dd>If checked, SMTP authentication will be enabled by default.</dd>
+	<dt>Allow direct mode</dt>
+	<dd>This option allows or forbids users to set Direct Mode for their POP3 accounts and IMAP folders.</dd>
+	<dt>Direct mode is default</dt>
+	<dd>This option makes all new POP3 accounts and all IMAP folders be synchronized in Direct Mode by default. In Direct Mode, AfterLogic WebMail Lite works directly with the mailbox on mail server (mails are always taken directly from mail server), database is used only to store user accounts and address books (mails are not stored in database).</dd>
+	<dt>Attachment size limit</dt>
+	<dd>Specifies maximum allowed size (in bytes) of the file to be attached to the message during composing. If the attachment file size exceeds specified limit, it will be rejected (Note that your web server may also imply certain restirictions on maximum size of the data being uploaded. See FAQ for details).</dd>
+	<dt>Enable attachment size limit</dt>
+	<dd>Specifies whatever to limit atachment size or not. Set it to the value of maximum allowed attachment size (in bytes).</dd>
+	<dt>Mailbox size limit</dt>
+	<dd>Specifies maximum allowed size (in bytes) of mailbox. Mailbox can't contain messages with summary size greater than this value.</dd>
+	<dt>Enable mailbox size limit</dt>
+	<dd>Specifies whatever to limit mailbox size or not. Set it to the value of user's maximum mailbox size (in bytes).</dd>
+	<dt>Take quota value from IMAP server</dt>
+	<dd>This setting makes WebMail Lite to request mailbox size from IMAP server instead of using "Mailbox size limit" parameter. This works for IMAP accounts only. Moreover, this setting doesn't affect accounts which already exist in WebMail Lite database, it works as a default setting for new accounts.
+		<br><br>
+		Quota is optional IMAP extension and not all IMAP servers support it. If you turn this setting on, but the IMAP server doesn't support quotas, "Take quota value from IMAP server" will be disabled in user account settings and "Mailbox size limit" parameter of WebMail will be used.</dd>
+	<dt>Allow users to change email settings</dt>
+	<dd>This option allows or forbids users to change their account settings ("Friendly Name" can be edited anyway).</dd>
+	<dt>Allow automatic registration of new users on first login</dt>
+	<dd>This option allows or prohibits automatic user registration in WebMail Lite on first login. If this option is turned off, new users can be added to WebMail Lite only by administrator via "WebMail Administration Console".</dd>
+	<dt class="disabled">Allow users to add new email accounts</dt>
+	<dd class="disabled">This option allows or forbids creating multiple email accounts per user.</dd>
+</dl>
+<h2>Internationalization Support</h2>
+<img src="img/webmail-common-settings2.png" />
+<dl>
+	<dt>Default user charset</dt>
+	<dd>Default charset for assigned to messages composed by the user.</dd>
+	<dt>Allow users to change charset</dt>
+	<dd>Permission to change this charset by users themselves.</dd>
+	<dt>Default user time offset</dt>
+	<dd>Default Timezone Offset.</dd>
+	<dt>Allow users change time offset</dt>
+	<dd>Permission to change it by users themselves.</dd>
+</dl>
+</body>
+</html>
